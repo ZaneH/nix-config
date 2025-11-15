@@ -6,7 +6,7 @@ lib.mkIf pkgs.stdenv.isLinux {
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # 2) Install Dolphin, Kate, Konsole—and VSCodium itself
+  # 2) Exclude unwanted KDE apps
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     elisa
     kate

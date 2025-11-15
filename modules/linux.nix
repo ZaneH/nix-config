@@ -16,8 +16,8 @@
 
     ####################   Home-Manager glue   ####################
     home-manager.sharedModules = [
-      plasma-manager.homeModules."plasma-manager"  # provides `programs.plasma`
-      ../modules/kde-home.nix                      # Plasma tweaks
+      plasma-manager.homeModules."plasma-manager" # provides `programs.plasma`
+      ../modules/kde-home.nix # Plasma config
     ];
 
     ####################   Boot & kernel   ####################
@@ -28,12 +28,6 @@
 
     ####################   Core services   ####################
     networking.networkmanager.enable = true;
-
-    services.displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-    services.desktopManager.plasma6.enable = true;
 
     services.printing.enable = true;
     services.pulseaudio.enable = false;
@@ -47,5 +41,34 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      neovim
+      zoxide
+      tree
+      tealdeer
+      wget
+      xclip
+      vlc
+      transmission_4-qt
+      pavucontrol
+      vscode
+      thunderbird
+      brave
+      fd
+      htop
+      ripgrep
+      ffmpeg
+      direnv
+      btop
+      jq
+      git
+      postgresql
+      uv
+      ngrok
+      httpie
+      pnpm
+      tmux
+    ];
   };
 }

@@ -6,30 +6,20 @@
     # ./research.nix 
     # ./work.nix 
   ];
-
   fonts.fontconfig.enable = true;
-
   nix = {
     settings.auto-optimise-store = true;
-
     gc = {
       automatic = true;
       options = "--delete-older-than 30d";
     };
   };
-
   home = { 
     packages = with pkgs; [ 
-      neovim
-      zoxide
-      tree
-      tealdeer
-      wget
-      xclip
+      # Most of my packages declared are in modules/linux.nix
     ];
     stateVersion = "25.05";
   };
-
   #nix = {
     #package = pkgs.nixUnstable;
     #settings = {
@@ -38,7 +28,6 @@
     #};
   #};
   home.shell.enableZshIntegration = true;
-
   programs = {
     home-manager.enable = true;
     # direnv.enable = true;
@@ -141,7 +130,6 @@
 #      initExtra = builtins.readFile ../dotfiles/.zshrc + builtins.readFile ../dotfiles/.p10k.zsh;
 #    };
   };
-
   services = {
   #  gpg-agent = {
   #    enable = true;
