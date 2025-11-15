@@ -92,7 +92,8 @@
     isNormalUser = true;
     description = "Me";
     extraGroups = [ "networkmanager" "wheel" ];
-    initialHashedPassword = "";
+    initialHashedPassword = "$y$j9T$HY94rD7gaT78XgT3mZVlW/$C6rSif/qBW5A.l/UFTrnv009o5U0z5dvK8oDYRSSKH4";
+    uid = 1000
   };
 
   # Allow unfree packages

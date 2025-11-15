@@ -4,4 +4,5 @@
   kde = ./kde.nix;
   kdeHome = ./kde-home.nix;
   globalHome = ./home.nix;
+  networkDrives = ./network-drives.nix;
 }

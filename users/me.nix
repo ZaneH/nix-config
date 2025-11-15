@@ -14,6 +14,7 @@ in
     isNormalUser = true;
     home = "/home/${username}";
     extraGroups = [ "wheel" ];
+    uid = 1000;
     initialHashedPassword = "$y$j9T$HY94rD7gaT78XgT3mZVlW/$C6rSif/qBW5A.l/UFTrnv009o5U0z5dvK8oDYRSSKH4"; # "password"
   };
 

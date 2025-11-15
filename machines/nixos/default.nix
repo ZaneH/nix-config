@@ -4,6 +4,7 @@
   imports = [
     modules.universal
     modules.linux
+    modules.networkDrives
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
