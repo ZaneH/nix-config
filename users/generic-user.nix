@@ -19,7 +19,6 @@ in
     home.homeDirectory = "/home/${username}";
     imports = [
       ../modules/kde-home.nix
-      ../modules/guake.nix
       # uncomment development if you need python, uv, selenium, and playwright      
       # ../modules/development.nix
       # ../dotfiles/multiple-ssh.nix

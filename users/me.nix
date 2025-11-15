@@ -1,42 +1,41 @@
+
 { config, pkgs, home-manager, plasma-manager, lib, ... }:
 
 let
-  username     = "admin";
+  username = "me";
 
   # 👇 Define exactly the packages this user wants
   userPackages = with pkgs; [
-    vscodium
-    # add more here, e.g.
-    # docker
-    # firefox
   ];
 in
 {
   # 1) Create the UNIX account
   users.extraUsers.${username} = {
-      isNormalUser = true;
-      home         = "/home/${username}";
-      extraGroups  = [ "wheel" ];
-    };
-  
+    isNormalUser = true;
+    home         = "/home/${username}";
+    extraGroups  = [ "wheel" ];
+    initialHashedPassword = "";
+  };
 
-
-  # 2) Wire up Home-Manager for dev
+  # 2) Wire up Home-Manager
   home-manager.users = {
     "${username}" = {
       home.username      = username;
       home.homeDirectory = "/home/${username}";
 
       imports = [
-        ../modules/home.nix
-        (import ../modules/kde-home.nix { inherit pkgs plasma-manager lib; })
+        ../modules/kde-home.nix
+        ../modules/development.nix
+        ../dotfiles/example-multiple-ssh.nix
+        ../modules/entertainment.nix
       ];
 
-      programs.fish.enable = true;
+      programs.zsh.enable = true;
 
       # 3) Inject your per-user package list here
       home.packages = userPackages;
     };
   };
+  
 }
 

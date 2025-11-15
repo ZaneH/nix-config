@@ -2,11 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    steam
-    steam-run
-    #lutris
     vlc
-    whipper
-    cyanrip
+    strawberry
   ];
 }
