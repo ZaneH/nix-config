@@ -26,7 +26,6 @@ in
       imports = [
         ../modules/kde-home.nix
         ../modules/development.nix
-        ../dotfiles/example-multiple-ssh.nix
         ../modules/entertainment.nix
       ];
 
