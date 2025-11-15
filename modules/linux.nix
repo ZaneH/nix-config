@@ -21,29 +21,31 @@
     ];
 
     ####################   Boot & kernel   ####################
-    boot.loader.grub.enable      = true;
-    boot.loader.grub.device      = "/dev/sda";
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/sda";
     boot.loader.grub.useOSProber = true;
-    boot.kernelPackages          = pkgs.linuxPackages_latest;
+    boot.kernelPackages = pkgs.linuxPackages_latest;
 
     ####################   Core services   ####################
     networking.networkmanager.enable = true;
 
     services.displayManager.sddm = {
-      enable         = true;
+      enable = true;
       wayland.enable = true;
     };
     services.desktopManager.plasma6.enable = true;
 
-    services.printing.enable   = true;
+    services.printing.enable = true;
     services.pulseaudio.enable = false;
-    security.rtkit.enable      = true;
+    security.rtkit.enable = true;
+
+    services.openssh.enable = true;
 
     services.pipewire = {
-      enable            = true;
-      alsa.enable       = true;
+      enable = true;
+      alsa.enable = true;
       alsa.support32Bit = true;
-      pulse.enable      = true;
+      pulse.enable = true;
     };
   };
 }
