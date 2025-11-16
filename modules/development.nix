@@ -5,27 +5,18 @@
   # Packages added to the user profile
   ##########################################################################
   home.packages = with pkgs; [
-    uv
-    bun
-    git-lfs
-    fd
-    htop
-    ripgrep
-    tealdeer
+    neovim
     ffmpeg
     direnv
-    htop
-    btop
-    jq
-    git
-    wget
-    postgresql
-    fd
-    uv
     ngrok
-    httpie
+    postgresql
+    bun
+    jq
+    uv
     pnpm
     tmux
+    vscode
+    httpie
   ];
 
   ##########################################################################

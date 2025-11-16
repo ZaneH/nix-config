@@ -43,32 +43,20 @@
     };
 
     environment.systemPackages = with pkgs; [
-      neovim
       zoxide
       tree
       tealdeer
       wget
+      git
+      git-lfs
       xclip
-      vlc
       transmission_4-qt
       pavucontrol
-      vscode
-      thunderbird
       brave
       fd
       htop
-      ripgrep
-      ffmpeg
-      direnv
       btop
-      jq
-      git
-      postgresql
-      uv
-      ngrok
-      httpie
-      pnpm
-      tmux
+      ripgrep
     ];
   };
 }
