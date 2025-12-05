@@ -7,13 +7,13 @@
   #######################################################################
   imports = [
     ../modules/kde.nix
+    ../modules/virtualisation.nix
   ];
 
   #######################################################################
   # 2. System-wide configuration                                        #
   #######################################################################
   config = {
-
     ####################   Home-Manager glue   ####################
     home-manager.sharedModules = [
       plasma-manager.homeModules."plasma-manager" # provides `programs.plasma`
@@ -22,9 +22,13 @@
 
     ####################   Boot & kernel   ####################
     boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/sda";
-    boot.loader.grub.useOSProber = true;
-    boot.kernelPackages = pkgs.linuxPackages_latest;
+    boot.loader.grub.device = "nodev";
+    boot.loader.grub.efiSupport = true;
+    boot.loader.grub.efiInstallAsRemovable = true;
+    boot.loader.systemd-boot.enable = false;
+    boot.loader.efi.canTouchEfiVariables = false;
+    boot.blacklistedKernelModules = [ "nvidia" "nouveau" "nvidia_drm" "nvidia_modeset" ];
+    boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
     ####################   Core services   ####################
     networking.networkmanager.enable = true;
@@ -57,6 +61,11 @@
       htop
       btop
       ripgrep
+      inetutils
+      usbutils
+      nftables
+      steam
+      linuxKernel.packages.linux_zen.cpupower
     ];
   };
 }

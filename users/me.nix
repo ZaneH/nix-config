@@ -6,6 +6,9 @@ let
 
   # 👇 Define exactly the packages this user wants
   userPackages = with pkgs; [
+    discord
+    discord-canary
+    moonlight-qt
   ];
 in
 {

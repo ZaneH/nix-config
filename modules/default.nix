@@ -5,4 +5,5 @@
   kdeHome = ./kde-home.nix;
   globalHome = ./home.nix;
   networkDrives = ./network-drives.nix;
+  virtualisation = ./virtualisation.nix;
 }
