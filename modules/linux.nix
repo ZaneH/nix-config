@@ -64,8 +64,10 @@
       inetutils
       usbutils
       nftables
+      file
       steam
       linuxKernel.packages.linux_zen.cpupower
+      dmidecode
     ];
   };
 }

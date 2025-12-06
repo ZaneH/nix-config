@@ -9,6 +9,7 @@ let
     discord
     discord-canary
     moonlight-qt
+    neofetch
   ];
 in
 {

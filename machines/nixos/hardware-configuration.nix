@@ -18,7 +18,16 @@
     "iommu=pt"
     "pcie_acs_override=downstream,multifunction"
     "vfio-pci.ids=10de:2504,10de:228e"
+    "hugepagesz=2M"
+    "hugepages=8192"
+    "isolcpus=2-7,10-15"
+    "nohz_full=2-7,10-15"
+    "rcu_nocbs=2-7,10-15"
   ];
+
+  boot.extraModprobeConfig = ''
+    options kvm_amd nested=0
+  '';
 
   boot.blacklistedKernelModules = [
     "nouveau"
