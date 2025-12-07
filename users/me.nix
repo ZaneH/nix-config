@@ -9,7 +9,8 @@ let
     discord
     discord-canary
     moonlight-qt
-    neofetch
+    google-chrome
+    geekbench_5
   ];
 in
 {
@@ -40,6 +41,5 @@ in
       home.packages = userPackages;
     };
   };
-  
 }
 

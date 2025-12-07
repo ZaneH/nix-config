@@ -21,6 +21,7 @@
     ];
 
     ####################   Boot & kernel   ####################
+    ### Configured for GPU Passthrough with an NVIDIA card  ###
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "nodev";
     boot.loader.grub.efiSupport = true;
@@ -46,6 +47,7 @@
       pulse.enable = true;
     };
 
+    ####################   System Packages   ##################
     environment.systemPackages = with pkgs; [
       zoxide
       tree
@@ -58,16 +60,21 @@
       pavucontrol
       brave
       fd
+      neofetch
       htop
       btop
       ripgrep
       inetutils
       usbutils
       nftables
+      lsof
       file
       steam
       linuxKernel.packages.linux_zen.cpupower
       dmidecode
+      psmisc
+      sops
+      age
     ];
   };
 }
