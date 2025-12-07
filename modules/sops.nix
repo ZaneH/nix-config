@@ -12,7 +12,7 @@
       keyFile = "/var/lib/sops-nix/key.txt";
     };
     secrets = {
-      # SSH private key
+      # SSH keys
       "id_rsa_personal" = {
         sopsFile = ./../secrets/ssh.yaml;
         # TODO: Make the uid and path not hard-coded
@@ -25,6 +25,13 @@
         uid = 1000;
         path = "/home/me/.ssh/id_rsa_personal.pub";
         mode = "0600";
+      };
+      # SSH configuration
+      "config" = {
+        sopsFile = ./../secrets/ssh.yaml;
+        uid = 1000;
+        path = "/home/me/.ssh/config";
+        mode = "0644";
       };
       # Git configuration
       "gitconfig" = {
