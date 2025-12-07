@@ -8,6 +8,7 @@
   imports = [
     ../modules/kde.nix
     ../modules/virtualisation.nix
+    ../modules/sops.nix
   ];
 
   #######################################################################
@@ -74,8 +75,6 @@
       linuxKernel.packages.linux_zen.cpupower
       dmidecode
       psmisc
-      sops
-      age
     ];
   };
 }
