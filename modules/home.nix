@@ -3,8 +3,8 @@
 {
   imports = [ 
     # ./entertainment.nix
-    # ./research.nix 
-    # ./work.nix 
+    # ./research.nix
+    # ./work.nix
   ];
   fonts.fontconfig.enable = true;
   nix = {
@@ -52,11 +52,10 @@
     #   enableFishIntegration = true;
     #   options = ["--cmd cd | source"];
     # };
-#    tmux = {
-#      enable = true;
-#      keyMode = "vi";
-#      extraConfig = builtins.readFile ../dotfiles/.tmux.conf;
-#    };
+   tmux = {
+     enable = true;
+     extraConfig = builtins.readFile ../dotfiles/tmux.conf;
+   };
     # neovim = {
     #   enable = true;
     #   defaultEditor = true;
@@ -131,14 +130,14 @@
 #    };
   };
   services = {
-  #  gpg-agent = {
-  #    enable = true;
-  #    enableSshSupport = true;
-  #    # one day
-  #    maxCacheTtl = 86400;
-  #    # six hours
-  #    defaultCacheTtl = 21600;
-  #    pinentry.package  = pkgs.pinentry-qt;
-  #  };
+   gpg-agent = {
+     enable = true;
+     enableSshSupport = true;
+     # one day
+     maxCacheTtl = 86400;
+     # six hours
+     defaultCacheTtl = 21600;
+     pinentry.package  = pkgs.pinentry-qt;
+   };
   };
 }

@@ -66,6 +66,7 @@
       ripgrep
       inetutils
       usbutils
+      pciutils
       nftables
       lsof
       file
