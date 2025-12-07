@@ -4,7 +4,7 @@ has a lot of the required changes for GPU passthrough to work. There's an NVIDIA
 > [!warning]
 > I have a 2nd PCI passed through for my audio interface. To get this working, I had to be sure it wasn't sharing a USB
 > controller with my keyboard and mouse-- if it did, the keyboard and mouse would be passed through and the host would lose
-> access. Using a combination of `lspci` and `lsusb`, I found a USB port that was isolated enough.
+> access. Using a combination of `lspci` and `lsusb`, I found a USB port that was isolated from other peripherals.
 
 > [!tip]
 > My drive in this config is using VirtIO. At first, I used SATA and it worked, but heard VirtIO has better performance.
@@ -284,6 +284,6 @@ Scroll up and delete:
 <video>
     <model type="none"/>
 </video>
-...
+```
 
 then press "Apply"
