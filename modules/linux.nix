@@ -50,7 +50,6 @@
 
     ####################   System Packages   ##################
     environment.systemPackages = with pkgs; [
-      zoxide
       tree
       tealdeer
       wget

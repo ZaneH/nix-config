@@ -5,7 +5,6 @@
   # Packages added to the user profile
   ##########################################################################
   home.packages = with pkgs; [
-    neovim
     ffmpeg
     direnv
     ngrok
@@ -14,7 +13,6 @@
     jq
     uv
     pnpm
-    tmux
     vscode
     httpie
   ];

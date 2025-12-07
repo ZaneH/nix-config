@@ -1,0 +1,5 @@
+# My local
+source ~/.local.zsh
+
+# My alias
+source ~/.alias.zsh

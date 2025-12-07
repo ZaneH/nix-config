@@ -27,6 +27,7 @@
     systems       = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
   in
   {
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
     nixosConfigurations = nixpkgs.lib.genAttrs hostNames (host:
       nixpkgs.lib.nixosSystem {
         system     = defaultSystem;
