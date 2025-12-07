@@ -9,10 +9,11 @@
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  
+  # <gpu_passthrough>
   boot.initrd.kernelModules = [ "vfio_pci" "vfio" "vfio_iommu_type1" ];
   boot.kernelModules = [ "kvm-amd" ];
 
-  # IOMMU + ACS override
   boot.kernelParams = [
     "amd_iommu=on"
     "iommu=pt"
@@ -20,9 +21,6 @@
     "vfio-pci.ids=10de:2504,10de:228e"
     "hugepagesz=2M"
     "hugepages=8192"
-    "isolcpus=2-7,10-15"
-    "nohz_full=2-7,10-15"
-    "rcu_nocbs=2-7,10-15"
   ];
 
   boot.extraModprobeConfig = ''
@@ -36,6 +34,7 @@
     "nvidia_modeset"
     "nvidia_uvm"
   ];
+  # </gpu_passthrough>
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/8b18a30d-4935-499c-a767-f3d9af4ecd88";
