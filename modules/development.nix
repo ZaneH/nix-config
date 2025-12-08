@@ -19,6 +19,8 @@
     gnumake
     gcc
     libtool
+    nerd-fonts.jetbrains-mono
+    gnupg
   ];
 
   ##########################################################################
