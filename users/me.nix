@@ -12,6 +12,7 @@ let
     google-chrome
     geekbench_5
     blender
+    ticker
   ];
 in
 {
