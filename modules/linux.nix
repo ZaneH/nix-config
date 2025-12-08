@@ -9,6 +9,7 @@
     ../modules/kde.nix
     ../modules/virtualisation.nix
     ../modules/sops.nix
+    ../modules/emacs.nix
   ];
 
   #######################################################################

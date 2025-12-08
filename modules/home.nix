@@ -18,6 +18,16 @@
     packages = with pkgs; [
       # Most of my packages declared are in modules/linux.nix
     ];
+    file = {
+      ".ssh/.keep" = {
+        text = "";
+        onChange = ''
+          chmod 700 ~/.ssh
+        '';
+      };
+      ".alias.zsh".source = ../dotfiles/alias.zsh;
+      ".local.zsh".source = ../dotfiles/local.zsh;
+    };
     stateVersion = "25.05";
   };
   home.shell.enableZshIntegration = true;

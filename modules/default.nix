@@ -7,4 +7,5 @@
   networkDrives = ./network-drives.nix;
   virtualisation = ./virtualisation.nix;
   sops = ./sops.nix;
+  emacs = ./emacs.nix;
 }
