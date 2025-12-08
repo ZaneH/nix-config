@@ -49,6 +49,8 @@
       pulse.enable = true;
     };
 
+    services.borgmatic.enable = true;
+
     ####################   System Packages   ##################
     environment.systemPackages = with pkgs; [
       tree
