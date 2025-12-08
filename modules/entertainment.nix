@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     vlc
     strawberry
+    calibre
   ];
   programs.obs-studio = {
     enable = true;

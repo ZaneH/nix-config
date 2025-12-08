@@ -11,6 +11,7 @@ let
     moonlight-qt
     google-chrome
     geekbench_5
+    blender
   ];
 in
 {
