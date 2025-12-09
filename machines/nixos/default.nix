@@ -1,4 +1,11 @@
-{ config, modules, pkgs, host, home-manager, ... }:
+{
+  config,
+  modules,
+  pkgs,
+  host,
+  home-manager,
+  ...
+}:
 
 {
   imports = [
@@ -27,5 +34,5 @@
     enable = true;
     enable32Bit = true;
   };
-  system.stateVersion  = "25.05";
+  system.stateVersion = "25.05";
 }

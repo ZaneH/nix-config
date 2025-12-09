@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   config = {
@@ -9,7 +14,7 @@
     # username=your_username
     # password=your_password
     # domain=WORKGROUP  (if needed)
-    # 
+    #
     # Then set permissions: chmod 600 /root/.smbcredentials
     fileSystems."/mnt/storage" = {
       device = "//10.0.0.76/storage";

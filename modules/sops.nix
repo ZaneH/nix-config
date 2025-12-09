@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [
@@ -38,6 +43,13 @@
         sopsFile = ./../secrets/git.yaml;
         uid = 1000;
         path = "/home/me/.gitconfig";
+        mode = "0644";
+      };
+      # PIA credentials
+      pia = {
+        sopsFile = ./../secrets/pia.yaml;
+        uid = 1000;
+        path = "/home/me/.pia_auth";
         mode = "0644";
       };
     };

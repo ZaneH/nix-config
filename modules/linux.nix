@@ -1,4 +1,3 @@
-# modules/linux.nix
 { config, pkgs, lib, plasma-manager, ... }:
 
 {
@@ -10,6 +9,7 @@
     ../modules/virtualisation.nix
     ../modules/sops.nix
     ../modules/emacs.nix
+    ../modules/pia.nix
   ];
 
   #######################################################################
@@ -59,13 +59,12 @@
       git
       git-lfs
       xclip
-      transmission_4-qt
       pavucontrol
-      brave
       fd
       neofetch
       htop
       btop
+      ncdu
       ripgrep
       inetutils
       usbutils
@@ -73,10 +72,16 @@
       nftables
       lsof
       file
-      steam
+      xrandr
       linuxKernel.packages.linux_zen.cpupower
       dmidecode
       psmisc
+
+      (python312.withPackages (ps: with ps; [
+        pip
+        requests
+        numpy
+      ]))
     ];
   };
 }

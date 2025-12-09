@@ -5,6 +5,7 @@
     vlc
     strawberry
     calibre
+    yt-dlp
   ];
   programs.obs-studio = {
     enable = true;

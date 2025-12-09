@@ -54,7 +54,10 @@
       oh-my-zsh = {
         enable = true;
         theme = "agnoster";
-        plugins = [ "git" "gpg-agent" ];
+        plugins = [
+          "git"
+          "gpg-agent"
+        ];
       };
       initContent = builtins.readFile ../dotfiles/zshrc;
     };

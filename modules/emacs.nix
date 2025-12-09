@@ -2,17 +2,15 @@
 
 {
   nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
-      sha256 = "1b3fcngw5nwgm2362sgvyphp8g4wk3nqvfx9v98rxbhmv9n59dh4";
-    }))
+    (import (
+      builtins.fetchTarball {
+        url = "https://github.com/nix-community/emacs-overlay/archive/b053300454d56dfc6881d465dc1cad11d0fac031.tar.gz";
+        sha256 = "0v6pl0zhs476hdfxdhaqk8y5nvibk4nra6rqxmfrq8a7fh230vv2";
+      }
+    ))
   ];
-  services.emacs = {
-    enable = true;
-    package = pkgs.emacs-pgtk;
-  };
+  services.emacs.enable = false;
   environment.systemPackages = with pkgs; [
-    emacs-pgtk
     copilot-language-server
   ];
 }

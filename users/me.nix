@@ -1,5 +1,11 @@
-
-{ config, pkgs, home-manager, plasma-manager, lib, ... }:
+{
+  config,
+  pkgs,
+  home-manager,
+  plasma-manager,
+  lib,
+  ...
+}:
 
 let
   username = "me";
@@ -13,6 +19,10 @@ let
     geekbench_5
     blender
     ticker
+    telegram-desktop
+    transmission_4-qt
+    steam
+    brave
   ];
 in
 {
@@ -43,4 +53,3 @@ in
     };
   };
 }
-

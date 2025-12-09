@@ -1,4 +1,9 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
   ##########################################################################
@@ -22,6 +27,11 @@
     nerd-fonts.jetbrains-mono
     gnupg
   ];
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs-pgtk;
+  };
 
   ##########################################################################
   # Environment variables for every shell (bash, zsh, fish …)
