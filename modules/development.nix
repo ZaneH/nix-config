@@ -26,7 +26,6 @@
     libtool
     nerd-fonts.jetbrains-mono
     gnupg
-    kdePackages.kcolorchooser
   ];
 
   programs.emacs.enable = true;

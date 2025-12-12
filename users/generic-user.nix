@@ -25,7 +25,7 @@ in
     home.username = username;
     home.homeDirectory = "/home/${username}";
     imports = [
-      ../modules/kde-home.nix
+      ../modules/plasma-config.nix
       # uncomment development if you need python, uv, selenium, and playwright
       # ../modules/development.nix
       # ../dotfiles/multiple-ssh.nix

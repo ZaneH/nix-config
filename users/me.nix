@@ -44,8 +44,9 @@ in
       home.username = username;
       home.homeDirectory = "/home/${username}";
       imports = [
-        ../modules/kde-home.nix
+        ../modules/plasma-config.nix
         ../modules/development.nix
+        ../modules/design.nix
         ../modules/entertainment.nix
       ];
       # 3) Inject your per-user package list here
