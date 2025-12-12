@@ -21,7 +21,7 @@ alias n="$EDITOR ."
 # Utilities
 alias pbcopy="xclip -selection clipboard"
 alias yt3="yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 0 --downloader aria2c --downloader-args '-c -j 3 -x 3 -s 3 -k 1M'"
-alias e="emacs -nw"
+alias e='emacsclient -c -a ""'
 
 # Fetch gitignore
 dl-gitignore() {

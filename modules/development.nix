@@ -26,11 +26,16 @@
     libtool
     nerd-fonts.jetbrains-mono
     gnupg
+    kdePackages.kcolorchooser
   ];
 
-  programs.emacs = {
+  programs.emacs.enable = true;
+  services.emacs = {
     enable = true;
-    package = pkgs.emacs-pgtk;
+    package = pkgs.emacs-gtk;
+    startWithUserSession = true;
+    defaultEditor = false;
+    client.enable = true;
   };
 
   ##########################################################################

@@ -9,8 +9,6 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
-    pia.url = "github:Fuwn/pia.nix";
-    pia.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -20,7 +18,6 @@
       home-manager,
       plasma-manager,
       sops-nix,
-      pia,
       ...
     }:
 
@@ -51,7 +48,6 @@
           modules = [
             ./machines/${host}/default.nix
             sops-nix.nixosModules.sops
-            pia.nixosModules.${defaultSystem}.default
           ]
           ++ nixpkgs.lib.optionals (defaultSystem == "x86_64-linux") [
             modules.kde

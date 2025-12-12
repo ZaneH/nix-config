@@ -9,8 +9,10 @@
       }
     ))
   ];
-  services.emacs.enable = false;
   environment.systemPackages = with pkgs; [
     copilot-language-server
+    typescript-language-server
+    typescript
+    prettierd
   ];
 }

@@ -9,7 +9,6 @@
     ../modules/virtualisation.nix
     ../modules/sops.nix
     ../modules/emacs.nix
-    ../modules/pia.nix
   ];
 
   #######################################################################
@@ -76,6 +75,7 @@
       linuxKernel.packages.linux_zen.cpupower
       dmidecode
       psmisc
+      wireguard-tools
 
       (python312.withPackages (ps: with ps; [
         pip
