@@ -9,6 +9,7 @@
     ../modules/virtualisation.nix
     ../modules/sops.nix
     ../modules/emacs.nix
+    ../modules/gaming.nix
   ];
 
   #######################################################################

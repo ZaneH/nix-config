@@ -26,6 +26,8 @@
     libtool
     nerd-fonts.jetbrains-mono
     gnupg
+    lazygit
+    nodejs_22
   ];
 
   programs.emacs.enable = true;
@@ -34,7 +36,6 @@
     package = pkgs.emacs-gtk;
     startWithUserSession = true;
     defaultEditor = false;
-    client.enable = true;
   };
 
   ##########################################################################

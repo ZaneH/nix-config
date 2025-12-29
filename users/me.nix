@@ -12,7 +12,6 @@ let
 
   # 👇 Define exactly the packages this user wants
   userPackages = with pkgs; [
-    discord
     discord-canary
     moonlight-qt
     google-chrome
@@ -21,8 +20,8 @@ let
     ticker
     telegram-desktop
     transmission_4-qt
-    steam
     brave
+    slack
   ];
 in
 {
