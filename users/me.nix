@@ -45,7 +45,7 @@ in
       imports = [
         ../modules/plasma-config.nix
         ../modules/development.nix
-        ../modules/design.nix
+        ../modules/creative.nix
         ../modules/entertainment.nix
       ];
       # 3) Inject your per-user package list here

@@ -9,4 +9,5 @@
   sops = ./sops.nix;
   emacs = ./emacs.nix;
   gaming = ./gaming.nix;
+  creative = ./creative.nix;
 }
