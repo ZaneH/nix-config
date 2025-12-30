@@ -41,5 +41,7 @@
         repeatRate = 30;
       };
     };
+    # TODO: Media playback shortcuts, disable mouse acceleration
+    # power management
   };
 }
