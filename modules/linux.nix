@@ -1,4 +1,10 @@
-{ config, pkgs, lib, plasma-manager, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  plasma-manager,
+  ...
+}:
 
 {
   #######################################################################
@@ -30,7 +36,12 @@
     boot.loader.grub.efiInstallAsRemovable = true;
     boot.loader.systemd-boot.enable = false;
     boot.loader.efi.canTouchEfiVariables = false;
-    boot.blacklistedKernelModules = [ "nvidia" "nouveau" "nvidia_drm" "nvidia_modeset" ];
+    boot.blacklistedKernelModules = [
+      "nvidia"
+      "nouveau"
+      "nvidia_drm"
+      "nvidia_modeset"
+    ];
     boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
     ####################   Core services   ####################
@@ -78,11 +89,13 @@
       psmisc
       wireguard-tools
 
-      (python312.withPackages (ps: with ps; [
-        pip
-        requests
-        numpy
-      ]))
+      (python312.withPackages (
+        ps: with ps; [
+          pip
+          requests
+          numpy
+        ]
+      ))
     ];
   };
 }
