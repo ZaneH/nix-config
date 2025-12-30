@@ -16,6 +16,7 @@
     ../modules/sops.nix
     ../modules/emacs.nix
     ../modules/gaming.nix
+    ../modules/bluetooth.nix
   ];
 
   #######################################################################

@@ -10,4 +10,5 @@
   emacs = ./emacs.nix;
   gaming = ./gaming.nix;
   creative = ./creative.nix;
+  bluetooth = ./bluetooth.nix;
 }
