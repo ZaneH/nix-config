@@ -47,6 +47,7 @@ in
         ../modules/development.nix
         ../modules/creative.nix
         ../modules/entertainment.nix
+        ../services/wayscriber.nix
       ];
       # 3) Inject your per-user package list here
       home.packages = userPackages;
