@@ -28,6 +28,7 @@
     gnupg
     lazygit
     nodejs_22
+    docker
     go
     gopls
   ];
