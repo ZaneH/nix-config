@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    vlc
+    haruna
     strawberry
     calibre
     yt-dlp
