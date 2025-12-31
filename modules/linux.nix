@@ -89,6 +89,9 @@
       dmidecode
       psmisc
       wireguard-tools
+      ffmpeg-headless
+      f3d
+      gdk-pixbuf
 
       (python312.withPackages (
         ps: with ps; [
