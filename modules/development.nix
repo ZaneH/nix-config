@@ -36,9 +36,10 @@
   programs.emacs.enable = true;
   services.emacs = {
     enable = true;
+    startWithUserSession = false;
     package = pkgs.emacs-gtk;
-    startWithUserSession = true;
     defaultEditor = false;
+    socketActivation.enable = true;
   };
 
   ##########################################################################

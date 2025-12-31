@@ -3,6 +3,7 @@
 {
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = [ "me" ];
+  users.groups.docker.members = [ "me" ];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
   networking.useDHCP = false;
@@ -11,4 +12,5 @@
   networking.bridges.br0.interfaces = [ "enp42s0" ];
   networking.interfaces.br0.useDHCP = true;
   networking.networkmanager.unmanaged = [ "enp42s0" ];
+  virtualisation.docker.enable = true;
 }
