@@ -10,7 +10,7 @@
   # Packages added to the user profile
   ##########################################################################
   home.packages = with pkgs; [
-    ffmpeg
+    nix-prefetch-scripts
     direnv
     ngrok
     postgresql
@@ -28,6 +28,8 @@
     gnupg
     lazygit
     nodejs_22
+    go
+    gopls
   ];
 
   programs.emacs.enable = true;
