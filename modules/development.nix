@@ -19,6 +19,7 @@
     uv
     pnpm
     vscode
+    act
     httpie
     cmake
     gnumake
