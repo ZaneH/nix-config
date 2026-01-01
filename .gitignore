@@ -1,2 +1,3 @@
 multiple-ssh.nix
 */__pycache__/*
+local.zsh
