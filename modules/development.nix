@@ -32,6 +32,8 @@
     docker
     go
     gopls
+    protobuf
+    buf
   ];
 
   programs.emacs.enable = true;
