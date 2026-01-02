@@ -40,6 +40,10 @@
   ];
 
   programs.emacs.enable = true;
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+  };
   services.emacs = {
     enable = true;
     startWithUserSession = false;
