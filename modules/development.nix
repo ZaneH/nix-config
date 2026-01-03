@@ -47,6 +47,7 @@ in
     protoc-gen-go
     grpc-gateway
     tex
+    hugo
   ];
 
   programs.emacs.enable = true;
