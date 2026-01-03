@@ -32,6 +32,7 @@
     docker
     go
     gopls
+    delve
     protobuf
     buf
     protoc-gen-go-grpc
