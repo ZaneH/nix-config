@@ -98,6 +98,7 @@
           pip
           requests
           numpy
+          grip
         ]
       ))
     ];
