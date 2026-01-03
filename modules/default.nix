@@ -11,4 +11,5 @@
   gaming = ./gaming.nix;
   creative = ./creative.nix;
   bluetooth = ./bluetooth.nix;
+  streaming = ./streaming.nix;
 }

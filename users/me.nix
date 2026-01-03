@@ -47,6 +47,7 @@ in
         ../modules/development.nix
         ../modules/creative.nix
         ../modules/entertainment.nix
+        ../modules/streaming.nix
         ../services/wayscriber.nix
       ];
       # 3) Inject your per-user package list here

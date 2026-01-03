@@ -1,4 +1,3 @@
-# modules/universal.nix
 { lib, ... }:
 
 {
