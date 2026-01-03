@@ -4,7 +4,15 @@
   config,
   ...
 }:
-
+let
+  tex = (pkgs.texliveFull.withPackages (
+    ps: with ps; [
+      dvisvgm dvipng
+      wrapfig amsmath ulem hyperref capt-of
+      collection-latexrecommended xcolor
+      fontspec microtype etoolbox fancyhdr
+  ]));
+in
 {
   ##########################################################################
   # Packages added to the user profile
@@ -38,6 +46,7 @@
     protoc-gen-go-grpc
     protoc-gen-go
     grpc-gateway
+    tex
   ];
 
   programs.emacs.enable = true;
