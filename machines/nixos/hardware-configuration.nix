@@ -42,6 +42,7 @@
 
   boot.extraModprobeConfig = ''
     options kvm_amd nested=0
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';
 
   boot.blacklistedKernelModules = [
@@ -52,6 +53,12 @@
     "nvidia_uvm"
   ];
   # </gpu_passthrough>
+
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+
+  security.polkit.enable = true;
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/8b18a30d-4935-499c-a767-f3d9af4ecd88";
