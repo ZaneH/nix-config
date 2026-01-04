@@ -50,7 +50,10 @@ in
     hugo
   ];
 
-  programs.emacs.enable = true;
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs-pgtk;
+  };
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -58,7 +61,7 @@ in
   services.emacs = {
     enable = true;
     startWithUserSession = false;
-    package = pkgs.emacs-gtk;
+    package = pkgs.emacs-pgtk;
     defaultEditor = false;
     socketActivation.enable = true;
   };
