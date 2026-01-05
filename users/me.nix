@@ -48,6 +48,8 @@ in
         ../modules/creative.nix
         ../modules/entertainment.nix
         ../modules/streaming.nix
+        ../modules/social.nix
+        ../modules/libre-office.nix
         ../services/wayscriber.nix
       ];
       # 3) Inject your per-user package list here

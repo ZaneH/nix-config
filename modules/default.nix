@@ -12,4 +12,6 @@
   creative = ./creative.nix;
   bluetooth = ./bluetooth.nix;
   streaming = ./streaming.nix;
+  libreOffice = ./libre-office.nix;
+  social = ./social.nix;
 }

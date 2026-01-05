@@ -48,6 +48,7 @@ in
     grpc-gateway
     tex
     hugo
+    ltex-ls-plus
   ];
 
   programs.emacs = {
