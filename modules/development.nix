@@ -4,16 +4,13 @@
   config,
   ...
 }:
-let
-  tex = (pkgs.texliveFull.withPackages (
-    ps: with ps; [
-      dvisvgm dvipng
-      wrapfig amsmath ulem hyperref capt-of
-      collection-latexrecommended xcolor
-      fontspec microtype etoolbox fancyhdr
-  ]));
-in
+
 {
+  imports = [
+    ./go.nix
+    ./emacs.nix
+  ];
+
   ##########################################################################
   # Packages added to the user profile
   ##########################################################################
@@ -38,33 +35,12 @@ in
     lazygit
     nodejs_22
     docker
-    go
-    gopls
-    delve
-    protobuf
-    buf
-    protoc-gen-go-grpc
-    protoc-gen-go
-    grpc-gateway
-    tex
     hugo
-    ltex-ls-plus
   ];
 
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacs-pgtk;
-  };
   programs.git = {
     enable = true;
     lfs.enable = true;
-  };
-  services.emacs = {
-    enable = true;
-    startWithUserSession = false;
-    package = pkgs.emacs-pgtk;
-    defaultEditor = false;
-    socketActivation.enable = true;
   };
 
   ##########################################################################
