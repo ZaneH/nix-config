@@ -9,6 +9,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    zig.url = "github:mitchellh/zig-overlay";
+    zig.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -18,6 +20,7 @@
       home-manager,
       plasma-manager,
       sops-nix,
+      zig,
       ...
     }:
 
@@ -48,6 +51,9 @@
           modules = [
             ./machines/${host}/default.nix
             sops-nix.nixosModules.sops
+            {
+              nixpkgs.overlays = [ zig.overlays.default ];
+            }
           ]
           ++ nixpkgs.lib.optionals (defaultSystem == "x86_64-linux") [
             modules.kde
