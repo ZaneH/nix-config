@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  zig,
   ...
 }:
 
@@ -10,6 +9,7 @@
   imports = [
     ./go.nix
     ./emacs.nix
+    ./zig.nix
   ];
 
   ##########################################################################
@@ -37,7 +37,6 @@
     nodejs_22
     docker
     hugo
-    zigpkgs.master-2026-01-04
   ];
 
   programs.git = {
