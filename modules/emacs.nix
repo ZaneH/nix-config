@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 let
+  # TODO: Move this to flake.nix in project dir
   tex = (
     pkgs.texliveFull.withPackages (
       ps: with ps; [
