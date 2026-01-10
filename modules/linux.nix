@@ -92,12 +92,15 @@
       f3d
       gdk-pixbuf
 
+      basedpyright
+
       (python312.withPackages (
         ps: with ps; [
           pip
           requests
           numpy
           grip
+          ruff
         ]
       ))
     ];

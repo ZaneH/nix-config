@@ -41,6 +41,7 @@
 
   programs.git = {
     enable = true;
+    settings.init.defaultBranch = "main";
     lfs.enable = true;
   };
 
