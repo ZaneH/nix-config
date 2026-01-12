@@ -17,14 +17,11 @@
   # You can make this conditional or move to machine-specific config
   networking.interfaces = lib.mkIf (config.networking.hostName == "nixos") {
     enp42s0.useDHCP = false;
+    br0.useDHCP = true;
   };
   
   networking.bridges = lib.mkIf (config.networking.hostName == "nixos") {
     br0.interfaces = [ "enp42s0" ];
-  };
-  
-  networking.interfaces.br0 = lib.mkIf (config.networking.hostName == "nixos") {
-    useDHCP = true;
   };
   
   networking.networkmanager.unmanaged = lib.mkIf (config.networking.hostName == "nixos") [ 

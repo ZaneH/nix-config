@@ -14,6 +14,7 @@
   creative = ./creative.nix;
   bluetooth = ./bluetooth.nix;
   streaming = ./streaming.nix;
+  backup = ./backup.nix;
   libreOffice = ./libre-office.nix;
   social = ./social.nix;
   go = ./go.nix;
