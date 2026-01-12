@@ -1,4 +1,3 @@
-# flake.nix - just the outputs section
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -33,14 +32,13 @@
       builtins.attrNames (builtins.readDir ./machines)
     );
 
-    # Map hostnames to their architectures
     hostArchitectures = {
       nixos = "x86_64-linux";
       mba = "aarch64-linux";
     };
 
     modules = import ./modules;
-    mkSpecialArgs = { inherit modules home-manager plasma-manager; }; # plasma-manager is here
+    mkSpecialArgs = { inherit modules home-manager plasma-manager; };
 
     systems = [
       "x86_64-linux"

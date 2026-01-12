@@ -15,7 +15,6 @@
   bluetooth = ./bluetooth.nix;
   streaming = ./streaming.nix;
   libreOffice = ./libre-office.nix;
-  social = ./social.nix;
   go = ./go.nix;
   zig = ./zig.nix;
 }
