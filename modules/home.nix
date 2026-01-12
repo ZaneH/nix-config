@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -6,7 +6,7 @@
     # ./research.nix
     # ./work.nix
   ];
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig.enable = lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") true;
   nix = {
     settings.auto-optimise-store = true;
     gc = {

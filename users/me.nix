@@ -1,6 +1,6 @@
 {
-  config,
   pkgs,
+  config,
   home-manager,
   plasma-manager,
   lib,
@@ -9,19 +9,19 @@
 
 let
   username = "me";
+  isX86Linux = pkgs.stdenv.hostPlatform.system == "x86_64-linux";
 
   # 👇 Define exactly the packages this user wants
   userPackages = with pkgs; [
-    discord-canary
     moonlight-qt
-    google-chrome
     geekbench_5
     blender
     ticker
     telegram-desktop
     transmission_4-qt
     brave
-    slack
+  ] ++ lib.optionals isX86Linux [
+    google-chrome
   ];
 in
 {

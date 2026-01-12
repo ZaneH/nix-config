@@ -15,7 +15,9 @@
     # password=your_password
     # domain=WORKGROUP  (if needed)
     #
-    # Then set permissions: chmod 600 /root/.smbcredentials
+    # Then set permissions:
+    # $ chmod 600 /root/.smbcredentials
+    # $ chown $USER:users /root/.smbcredentials
     fileSystems."/mnt/storage" = {
       device = "//10.0.0.76/storage";
       fsType = "cifs";

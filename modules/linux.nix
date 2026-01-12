@@ -1,108 +1,62 @@
-{
-  config,
-  pkgs,
-  lib,
-  plasma-manager,
-  ...
-}:
+{ config, pkgs, lib, ... }:
 
 {
-  #######################################################################
-  # 1. Extra system modules to import                                   #
-  #######################################################################
-  imports = [
-    ../modules/kde.nix
-    ../modules/virtualisation.nix
-    ../modules/sops.nix
-    ../modules/gaming.nix
-    ../modules/bluetooth.nix
-    ../modules/backup.nix
-  ];
+  ####################   Core services   ####################
+  networking.networkmanager.enable = true;
 
-  #######################################################################
-  # 2. System-wide configuration                                        #
-  #######################################################################
-  config = {
-    ####################   Home-Manager glue   ####################
-    home-manager.sharedModules = [
-      plasma-manager.homeModules."plasma-manager" # provides `programs.plasma`
-      ../modules/plasma-config.nix # Plasma config
-    ];
+  services.printing.enable = true;
+  services.pulseaudio.enable = false;
+  security.rtkit.enable = true;
 
-    ####################   Boot & kernel   ####################
-    ### Configured for GPU Passthrough with an NVIDIA card  ###
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "nodev";
-    boot.loader.grub.efiSupport = true;
-    boot.loader.grub.efiInstallAsRemovable = true;
-    boot.loader.systemd-boot.enable = false;
-    boot.loader.efi.canTouchEfiVariables = false;
-    boot.blacklistedKernelModules = [
-      "nvidia"
-      "nouveau"
-      "nvidia_drm"
-      "nvidia_modeset"
-    ];
-    boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  services.openssh.enable = true;
 
-    ####################   Core services   ####################
-    networking.networkmanager.enable = true;
-
-    services.printing.enable = true;
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
-
-    services.openssh.enable = true;
-
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-
-    ####################   System Packages   ##################
-    environment.systemPackages = with pkgs; [
-      tree
-      tealdeer
-      wget
-      git
-      git-lfs
-      xclip
-      pavucontrol
-      fd
-      neofetch
-      htop
-      btop
-      ncdu
-      ripgrep
-      inetutils
-      usbutils
-      pciutils
-      nftables
-      lsof
-      file
-      xrandr
-      linuxKernel.packages.linux_zen.cpupower
-      dmidecode
-      psmisc
-      wireguard-tools
-      ffmpeg-headless
-      f3d
-      gdk-pixbuf
-      caligula
-
-      basedpyright
-
-      (python312.withPackages (
-        ps: with ps; [
-          pip
-          requests
-          numpy
-          grip
-          ruff
-        ]
-      ))
-    ];
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
+
+  ####################   System Packages   ##################
+  environment.systemPackages = with pkgs; [
+    tree
+    tealdeer
+    wget
+    git
+    git-lfs
+    xclip
+    pavucontrol
+    fd
+    neofetch
+    htop
+    btop
+    ncdu
+    ripgrep
+    inetutils
+    usbutils
+    pciutils
+    nftables
+    lsof
+    file
+    xrandr
+    linuxKernel.packages.linux_zen.cpupower
+    dmidecode
+    psmisc
+    wireguard-tools
+    ffmpeg-headless
+    f3d
+    gdk-pixbuf
+    caligula
+    basedpyright
+
+    (python312.withPackages (
+      ps: with ps; [
+        pip
+        requests
+        numpy
+        grip
+        ruff
+      ]
+    ))
+  ];
 }
