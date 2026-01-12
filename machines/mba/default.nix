@@ -13,6 +13,7 @@
     modules.universal
     modules.linux
     modules.desktop
+    modules.sops
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
@@ -29,7 +30,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
   
-  hardware.asahi.peripheralFirmwareDirectory = ./firmware;
+  hardware.asahi.peripheralFirmwareDirectory = /etc/nixos/firmware;
 
   # Networking for Apple Silicon
   networking.networkmanager.wifi.backend = "iwd";
