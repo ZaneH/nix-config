@@ -4,10 +4,10 @@ let
 in
 {
   home.packages = with pkgs; [
-    kdePackages.kcolorchooser
-    krita
-    inkscape
+    element-desktop
   ] ++ lib.optionals isX86Linux [
-    davinci-resolve-studio
+    slack
+    discord
+    discord-canary
   ];
 }

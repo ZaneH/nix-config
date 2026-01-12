@@ -20,10 +20,7 @@ let
     telegram-desktop
     transmission_4-qt
     brave
-    element-desktop
   ] ++ lib.optionals isX86Linux [
-    slack
-    discord-canary
     google-chrome
   ];
 in
@@ -51,6 +48,7 @@ in
         ../modules/creative.nix
         ../modules/entertainment.nix
         ../modules/streaming.nix
+        ../modules/social.nix
         ../modules/libre-office.nix
         ../services/wayscriber.nix
       ];
