@@ -1,11 +1,13 @@
 {
   universal = ./universal.nix;
   linux = ./linux.nix;
+  desktop = ./desktop.nix;
   kde = ./kde.nix;
   plasmaConfig = ./plasma-config.nix;
   globalHome = ./home.nix;
   networkDrives = ./network-drives.nix;
   virtualisation = ./virtualisation.nix;
+  nvidiaPassthrough = ./nvidia-passthrough.nix;
   sops = ./sops.nix;
   emacs = ./emacs.nix;
   gaming = ./gaming.nix;

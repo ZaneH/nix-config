@@ -31,7 +31,7 @@
     gnumake
     gcc
     libtool
-    nerd-fonts.jetbrains-mono
+    # nerd-fonts.jetbrains-mono
     gnupg
     lazygit
     nodejs_22

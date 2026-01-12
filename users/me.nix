@@ -12,16 +12,16 @@ let
 
   # 👇 Define exactly the packages this user wants
   userPackages = with pkgs; [
-    discord-canary
+    # discord-canary
     moonlight-qt
-    google-chrome
+    # google-chrome
     geekbench_5
     blender
     ticker
     telegram-desktop
     transmission_4-qt
     brave
-    slack
+    # slack
   ];
 in
 {

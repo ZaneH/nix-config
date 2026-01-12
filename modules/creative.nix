@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     kdePackages.kcolorchooser
-    davinci-resolve-studio
+    # davinci-resolve-studio
     krita
     inkscape
   ];

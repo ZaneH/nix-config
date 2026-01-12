@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    discord
-    discord-canary
+    # discord
+    # discord-canary
     element-desktop
   ];
 }
