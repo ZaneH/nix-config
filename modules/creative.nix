@@ -5,5 +5,6 @@
     kdePackages.kcolorchooser
     davinci-resolve-studio
     krita
+    inkscape
   ];
 }

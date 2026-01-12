@@ -16,6 +16,7 @@
     ../modules/sops.nix
     ../modules/gaming.nix
     ../modules/bluetooth.nix
+    ../modules/backup.nix
   ];
 
   #######################################################################
@@ -60,8 +61,6 @@
       pulse.enable = true;
     };
 
-    services.borgmatic.enable = true;
-
     ####################   System Packages   ##################
     environment.systemPackages = with pkgs; [
       tree
@@ -91,6 +90,7 @@
       ffmpeg-headless
       f3d
       gdk-pixbuf
+      caligula
 
       basedpyright
 
