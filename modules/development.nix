@@ -37,6 +37,7 @@
     nodejs_22
     docker
     hugo
+    opencode
   ];
 
   programs.git = {
