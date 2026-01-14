@@ -38,6 +38,8 @@
     docker
     hugo
     opencode
+    imagemagick
+    basedpyright
   ];
 
   programs.git = {

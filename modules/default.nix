@@ -19,4 +19,5 @@
   social = ./social.nix;
   go = ./go.nix;
   zig = ./zig.nix;
+  gpuScreenRecorder = ./gpu-screen-recorder.nix;
 }

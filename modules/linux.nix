@@ -47,7 +47,8 @@
     f3d
     gdk-pixbuf
     caligula
-    basedpyright
+    bc
+    bind
 
     (python312.withPackages (
       ps: with ps; [

@@ -19,6 +19,7 @@
     modules.sops
     modules.gaming
     modules.backup
+    modules.gpuScreenRecorder
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
