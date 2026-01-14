@@ -38,6 +38,8 @@
     docker
     hugo
     opencode
+    claude-code
+    claude-monitor
     imagemagick
     basedpyright
   ];
