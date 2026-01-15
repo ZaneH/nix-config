@@ -15,6 +15,7 @@
     modules.desktop
     modules.sops
     modules.networkDrives
+    modules.printers
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix

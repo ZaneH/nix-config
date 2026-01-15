@@ -20,6 +20,7 @@
     modules.gaming
     modules.backup
     modules.gpuScreenRecorder
+    modules.printers
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix

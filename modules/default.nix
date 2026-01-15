@@ -20,4 +20,5 @@
   go = ./go.nix;
   zig = ./zig.nix;
   gpuScreenRecorder = ./gpu-screen-recorder.nix;
+  printers = ./printers.nix;
 }
