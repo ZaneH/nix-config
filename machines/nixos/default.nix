@@ -21,6 +21,7 @@
     modules.backup
     modules.gpuScreenRecorder
     modules.printers
+    modules.ollama
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix

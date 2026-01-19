@@ -21,4 +21,5 @@
   zig = ./zig.nix;
   gpuScreenRecorder = ./gpu-screen-recorder.nix;
   printers = ./printers.nix;
+  ollama = ./ollama.nix;
 }

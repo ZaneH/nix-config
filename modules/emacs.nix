@@ -29,6 +29,8 @@ in
     prettierd
     ltex-ls-plus
     tex
+    vips
+    unzip
   ];
 
   programs.emacs = {
