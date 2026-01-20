@@ -7,6 +7,7 @@ in
     kdePackages.kcolorchooser
     krita
     inkscape
+    darktable
   ] ++ lib.optionals isX86Linux [
     davinci-resolve-studio
   ];

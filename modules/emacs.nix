@@ -31,6 +31,7 @@ in
     tex
     vips
     unzip
+    emacs-lsp-booster
   ];
 
   programs.emacs = {
