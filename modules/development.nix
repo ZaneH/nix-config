@@ -41,6 +41,8 @@
     claude-monitor
     imagemagick
     basedpyright
+    dbeaver-bin
+    parquet-tools
     (opencode.overrideAttrs (oldAttrs: rec {
       version = "1.1.21";
       src = fetchFromGitHub {
