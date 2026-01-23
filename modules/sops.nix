@@ -31,6 +31,19 @@
         path = "/home/me/.ssh/id_rsa_personal.pub";
         mode = "0600";
       };
+      "id_rsa_work" = {
+        sopsFile = ./../secrets/ssh.yaml;
+        # TODO: Make the uid and path not hard-coded
+        uid = 1000;
+        path = "/home/me/.ssh/id_rsa_work";
+        mode = "0600";
+      };
+      "id_rsa_work_pub" = {
+        sopsFile = ./../secrets/ssh.yaml;
+        uid = 1000;
+        path = "/home/me/.ssh/id_rsa_work.pub";
+        mode = "0600";
+      };
       # SSH configuration
       "config" = {
         sopsFile = ./../secrets/ssh.yaml;
