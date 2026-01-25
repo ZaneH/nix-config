@@ -16,6 +16,7 @@
     modules.nvidiaPassthrough
     modules.virtualisation
     modules.networkDrives
+    modules.tailscale
     modules.sops
     modules.gaming
     modules.backup

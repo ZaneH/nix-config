@@ -22,4 +22,5 @@
   gpuScreenRecorder = ./gpu-screen-recorder.nix;
   printers = ./printers.nix;
   ollama = ./ollama.nix;
+  tailscale = ./tailscale.nix;
 }
