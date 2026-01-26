@@ -43,6 +43,7 @@
     basedpyright
     dbeaver-bin
     parquet-tools
+    gdb
     (opencode.overrideAttrs (oldAttrs: rec {
       version = "1.1.21";
       src = fetchFromGitHub {
