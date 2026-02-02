@@ -58,6 +58,12 @@
         path = "/home/me/.gitconfig";
         mode = "0644";
       };
+      "gitconfig_work" = {
+        sopsFile = ./../secrets/git.yaml;
+        uid = 1000;
+        path = "/home/me/.gitconfig-work";
+        mode = "0644";
+      };
     };
   };
 }

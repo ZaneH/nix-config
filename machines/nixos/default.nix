@@ -23,6 +23,8 @@
     modules.gpuScreenRecorder
     modules.printers
     modules.ollama
+    modules.openVpn
+    modules.private
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix

@@ -44,19 +44,6 @@
     dbeaver-bin
     parquet-tools
     gdb
-    (opencode.overrideAttrs (oldAttrs: rec {
-      version = "1.1.21";
-      src = fetchFromGitHub {
-        owner = "anomalyco";
-        repo = "opencode";
-        tag = "v${version}";
-        hash = "sha256-8ykONBWMiq9EACHOsdx1AFPoj53Tsxi3EbUDVciH5Ok=";
-      };
-      node_modules = oldAttrs.node_modules.overrideAttrs {
-        inherit version src;
-        outputHash = "sha256-omSbcp/yKClsGbLiNJjeSL29CGKPbcem6f+nV13RjG4=";
-      };
-    }))
   ];
 
   programs.git = {
