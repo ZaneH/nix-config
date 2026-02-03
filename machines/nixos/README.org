@@ -1,0 +1,9 @@
+# NixOS
+
+This configuration is my deskop. There is a module called =private= that is intentionally missing from this repo.
+
+The SOPS key goes in =/var/lib/sops-nix/keys.txt=.
+
+#+begin_src sh
+sudo nixos-rebuild switch --flake .#nixos
+#+end_src
