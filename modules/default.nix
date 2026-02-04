@@ -24,5 +24,4 @@
   ollama = ./ollama.nix;
   tailscale = ./tailscale.nix;
   openVpn = ./openvpn.nix;
-  private = ./private.nix;
 }

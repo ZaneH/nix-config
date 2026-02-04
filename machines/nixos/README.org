@@ -1,9 +1,10 @@
 # NixOS
 
-This configuration is my deskop. There is a module called =private= that is intentionally missing from this repo.
+This configuration is my deskop. This config expects a file at =~/.config/nix/private.nix= where programs and
+configuration can be saved without having to track it with git.
 
 The SOPS key goes in =/var/lib/sops-nix/keys.txt=.
 
 #+begin_src sh
-sudo nixos-rebuild switch --flake .#nixos
+sudo nixos-rebuild switch --flake .#nixos --impure
 #+end_src

@@ -24,10 +24,10 @@
     modules.printers
     modules.ollama
     modules.openVpn
-    modules.private
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
+    /home/me/.config/nix/private.nix
   ];
   
   networking.hostName = host;
