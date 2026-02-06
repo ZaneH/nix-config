@@ -27,9 +27,6 @@
     vscode
     act
     httpie
-    cmake
-    gnumake
-    gcc
     libtool
     nerd-fonts.jetbrains-mono
     gnupg
@@ -44,6 +41,11 @@
     dbeaver-bin
     parquet-tools
     gdb
+    cmake
+    gnumake
+    gcc
+    cmake-language-server
+    clang-tools
   ];
 
   programs.git = {
