@@ -49,6 +49,7 @@
     caligula
     bc
     bind
+    cmake-language-server
 
     (python312.withPackages (
       ps: with ps; [
