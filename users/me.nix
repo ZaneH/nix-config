@@ -12,17 +12,20 @@ let
   isX86Linux = pkgs.stdenv.hostPlatform.system == "x86_64-linux";
 
   # 👇 Define exactly the packages this user wants
-  userPackages = with pkgs; [
-    moonlight-qt
-    geekbench_5
-    blender
-    ticker
-    telegram-desktop
-    transmission_4-qt
-    brave
-  ] ++ lib.optionals isX86Linux [
-    google-chrome
-  ];
+  userPackages =
+    with pkgs;
+    [
+      moonlight-qt
+      geekbench_5
+      blender
+      ticker
+      telegram-desktop
+      transmission_4-qt
+      brave
+    ]
+    ++ lib.optionals isX86Linux [
+      google-chrome
+    ];
 in
 {
   # 1) Create the UNIX account

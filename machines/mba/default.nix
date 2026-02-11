@@ -22,12 +22,12 @@
   ];
 
   networking.hostName = host;
-  
+
   home-manager.sharedModules = [
     plasma-manager.homeModules.plasma-manager
     modules.plasmaConfig
   ];
-  
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
   hardware.asahi.peripheralFirmwareDirectory = /etc/nixos/firmware;
