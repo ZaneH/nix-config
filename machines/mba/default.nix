@@ -12,6 +12,7 @@
   imports = [
     modules.universal
     modules.linux
+    modules.nvim
     modules.desktop
     modules.sops
     modules.networkDrives
