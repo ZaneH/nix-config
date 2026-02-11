@@ -10,6 +10,7 @@
   nvidiaPassthrough = ./nvidia-passthrough.nix;
   sops = ./sops.nix;
   emacs = ./emacs.nix;
+  nvim = ./nvim.nix;
   gaming = ./gaming.nix;
   creative = ./creative.nix;
   bluetooth = ./bluetooth.nix;

@@ -9,6 +9,7 @@
   imports = [
     ./go.nix
     ./emacs.nix
+    ./nvim.nix
     ./zig.nix
   ];
 
@@ -46,6 +47,8 @@
     gcc
     cmake-language-server
     clang-tools
+    ccls
+    ninja
   ];
 
   programs.git = {

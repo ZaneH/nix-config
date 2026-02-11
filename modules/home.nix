@@ -38,9 +38,6 @@
       enable = true;
       extraConfig = builtins.readFile ../dotfiles/tmux.conf;
     };
-    neovim = {
-      enable = true;
-    };
     zoxide = {
       enable = true;
     };
