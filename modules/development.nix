@@ -49,6 +49,7 @@
     clang-tools
     ccls
     ninja
+    vscode-extensions.vadimcn.vscode-lldb
   ];
 
   programs.git = {
@@ -62,5 +63,6 @@
   ##########################################################################
   home.sessionVariables = {
     EDITOR = "nvim";
+    CODELLDB = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
   };
 }
