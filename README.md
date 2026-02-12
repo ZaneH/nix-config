@@ -4,9 +4,14 @@ My preferred KDE + Wayland Linux configuration using NixOS. Derived from [BedHed
 
 Configured for GPU Passthrough with an NVIDIA card. Read more about the KVM config [here](./virt-manager.md).
 
-```bash
-nixos-rebuild switch --flake .#nixos
-```
+### Machines
+
+- [./machines/nixos/README.org](nixos) - Desktop
+- [./machines/mba/README.org](mba) - MacBook Air
+
+### npm
+
+There's a good chance you'll need to run `npm set prefix ~/.npm-global` before `npm i -g ...` will work.
 
 ### SOPS
 
