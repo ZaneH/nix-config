@@ -50,6 +50,7 @@
     ccls
     ninja
     vscode-extensions.vadimcn.vscode-lldb
+    vscode-extensions.ms-vscode.cpptools
   ];
 
   programs.git = {
@@ -64,5 +65,6 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     CODELLDB = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
+    OPENDEBUGAD7 = "${pkgs.vscode-extensions.ms-vscode.cpptools}/share/vscode/extensions/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7";
   };
 }
