@@ -51,6 +51,7 @@
     ninja
     vscode-extensions.vadimcn.vscode-lldb
     vscode-extensions.ms-vscode.cpptools
+    cutter
   ];
 
   programs.git = {
