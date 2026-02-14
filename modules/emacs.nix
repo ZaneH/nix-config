@@ -39,10 +39,10 @@ in
     package = pkgs.emacs-pgtk;
   };
   services.emacs = {
-    enable = true;
+    enable = false;
     startWithUserSession = false;
     package = pkgs.emacs-pgtk;
     defaultEditor = false;
-    socketActivation.enable = true;
+    socketActivation.enable = false;
   };
 }
