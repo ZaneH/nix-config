@@ -51,6 +51,7 @@
     ninja
     vscode-extensions.vadimcn.vscode-lldb
     vscode-extensions.ms-vscode.cpptools
+    vscode-langservers-extracted
     cutter
   ];
 
