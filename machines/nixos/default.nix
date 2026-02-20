@@ -22,7 +22,7 @@
     modules.backup
     modules.gpuScreenRecorder
     modules.printers
-    modules.ollama
+    # modules.ollama
     modules.openVpn
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
