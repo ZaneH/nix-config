@@ -32,6 +32,7 @@
     nerd-fonts.jetbrains-mono
     gnupg
     lazygit
+    jujutsu
     nodejs_22
     docker
     hugo
