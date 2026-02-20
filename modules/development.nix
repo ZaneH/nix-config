@@ -53,6 +53,7 @@
     vscode-extensions.ms-vscode.cpptools
     vscode-langservers-extracted
     yaml-language-server
+    nixd
     cutter
   ];
 

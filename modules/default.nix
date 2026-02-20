@@ -25,4 +25,5 @@
   ollama = ./ollama.nix;
   tailscale = ./tailscale.nix;
   openVpn = ./openvpn.nix;
+  flatpak = ./flatpak.nix;
 }

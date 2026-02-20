@@ -19,6 +19,7 @@
     modules.tailscale
     modules.sops
     modules.gaming
+    modules.flatpak
     modules.backup
     modules.gpuScreenRecorder
     modules.printers
