@@ -54,6 +54,7 @@
     vscode-langservers-extracted
     yaml-language-server
     nixd
+    nixfmt
     cutter
   ];
 
