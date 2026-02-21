@@ -54,6 +54,7 @@
         plugins = [
           "git"
           "gpg-agent"
+          "jj"
         ];
       };
       initContent = builtins.readFile ../dotfiles/zshrc;
