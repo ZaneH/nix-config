@@ -8,7 +8,6 @@ in
     with pkgs;
     [
       element-desktop
-      vesktop
     ]
     ++ lib.optionals isX86Linux [
       slack
@@ -17,4 +16,17 @@ in
     ++ lib.optionals isARMLinux [
       slacky
     ];
+  programs.vesktop = {
+    enable = true;
+    vencord = {
+      settings = {
+        useQuickCss = true;
+      };
+      extraQuickCss = ''
+        ul[aria-label="Direct Messages"] li:has([href="/store"],[href="/shop"],[href="/quest-home"]) {
+            display: none;
+        }
+      '';
+    };
+  };
 }
