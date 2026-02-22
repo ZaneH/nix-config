@@ -8,10 +8,10 @@ in
     with pkgs;
     [
       element-desktop
+      vesktop
     ]
     ++ lib.optionals isX86Linux [
       slack
-      discord
       discord-canary
     ]
     ++ lib.optionals isARMLinux [
