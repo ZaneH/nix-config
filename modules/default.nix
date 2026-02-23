@@ -20,6 +20,8 @@
   social = ./social.nix;
   go = ./go.nix;
   zig = ./zig.nix;
+  amdProfiling = ./amd-profiling.nix;
+  vtune = ./vtune.nix;
   gpuScreenRecorder = ./gpu-screen-recorder.nix;
   printers = ./printers.nix;
   ollama = ./ollama.nix;

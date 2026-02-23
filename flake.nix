@@ -13,6 +13,7 @@
     zig.inputs.nixpkgs.follows = "nixpkgs";
     apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     apple-silicon.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-vtune.url = "github:xzfc/nixpkgs/4a32ac7311f23d4a17f6f294d19e1df5afc4f90d";
   };
 
   outputs =
@@ -24,6 +25,7 @@
       sops-nix,
       zig,
       apple-silicon,
+      nixpkgs-vtune,
       ...
     }:
 
@@ -40,6 +42,10 @@
 
       modules = import ./modules;
       mkSpecialArgs = { inherit modules home-manager plasma-manager; };
+      vtunePkgs = import nixpkgs-vtune {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
 
       systems = [
         "x86_64-linux"
@@ -64,7 +70,18 @@
             ./machines/${host}/default.nix
             sops-nix.nixosModules.sops
             {
-              nixpkgs.overlays = [ zig.overlays.default ];
+              nixpkgs.overlays = [
+                zig.overlays.default
+                (final: prev:
+                  if prev.stdenv.hostPlatform.system == "x86_64-linux" then
+                    {
+                      intel-oneapi-vtune = vtunePkgs.intel-oneapi-vtune;
+                      amd-uprof = prev.callPackage ./pkgs/amd-uprof.nix { };
+                    }
+                  else
+                    { }
+                )
+              ];
             }
           ]
           ++ nixpkgs.lib.optionals isAppleSilicon [

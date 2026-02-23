@@ -1,7 +1,5 @@
 {
-  config,
   modules,
-  pkgs,
   host,
   home-manager,
   plasma-manager,
@@ -23,8 +21,8 @@
     modules.backup
     modules.gpuScreenRecorder
     modules.printers
-    # modules.ollama
     modules.openVpn
+    modules.amdProfiling
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
@@ -57,6 +55,9 @@
     enable = true;
     enable32Bit = true;
   };
+
+  programs.amdProfiling.enable = true;
+  programs.amdProfiling.enableUprof = true;
 
   system.stateVersion = "25.05";
 }
