@@ -1,0 +1,41 @@
+/*
+ * The default tabs were not doing it for me, there's a discussion here:
+ * https://github.com/ghostty-org/ghostty/discussions/5882
+ * and https://github.com/ghostty-org/ghostty/discussions/3297#discussioncomment-14226325
+ */
+headerbar {
+  min-height: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+tabbar tabbox {
+  margin: -4px 0;
+  padding: 0;
+  min-height: 10px;
+  background-color: #1a1a1a;
+  font-family: monospace;
+}
+
+tabbar tabbox tab {
+  margin: 4px 0;
+  padding: 0;
+  color: #9ca3af;
+}
+
+tabbar tabbox tab:selected {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+tabbar tabbox tabboxchild {
+  border-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+tabbar tabbox tab label {
+  font-size: 12px;
+}

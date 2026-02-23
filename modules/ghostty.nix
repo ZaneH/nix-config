@@ -1,6 +1,8 @@
-{ ... }:
+{ config, ... }:
 
 {
+  home.file.".config/ghostty/tab-style.css".source = ../dotfiles/ghostty/tab-style.css;
+
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
@@ -11,7 +13,7 @@
       gtk-wide-tabs = false;
       bell-features = "system";
       scrollback-limit = 10000000;
-      gtk-custom-css = "/tmp/tab-style.css";
+      gtk-custom-css = "${config.home.homeDirectory}/.config/ghostty/tab-style.css";
     };
   };
 }
