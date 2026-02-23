@@ -1,4 +1,5 @@
 {
+  pkgs,
   stdenv,
   requireFile,
   lib,
@@ -18,7 +19,12 @@
   libarchive,
   libglvnd,
   rocmPackages,
-  xorg,
+  libx11,
+  libxi,
+  libxcb,
+  libice,
+  libxmu,
+  libsm,
   patchelf,
 }:
 
@@ -59,16 +65,16 @@ stdenv.mkDerivation rec {
     libarchive
     libglvnd
     rocmPackages.rocprofiler
-    xorg.libX11
-    xorg.libXi
-    xorg.libxcb
-    xorg.xcbutilwm
-    xorg.xcbutilimage
-    xorg.xcbutilrenderutil
-    xorg.xcbutilkeysyms
-    xorg.libICE
-    xorg.libXmu
-    xorg.libSM
+    libx11
+    libxi
+    libxcb
+    pkgs."libxcb-wm"
+    pkgs."libxcb-image"
+    pkgs."libxcb-render-util"
+    pkgs."libxcb-keysyms"
+    libice
+    libxmu
+    libsm
   ];
 
   postUnpack = ''
