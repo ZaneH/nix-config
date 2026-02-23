@@ -14,6 +14,7 @@
       bell-features = "system";
       scrollback-limit = 10000000;
       gtk-custom-css = "${config.home.homeDirectory}/.config/ghostty/tab-style.css";
+      scrollbar = "system";
     };
   };
 }

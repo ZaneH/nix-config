@@ -11,6 +11,8 @@
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     zig.url = "github:mitchellh/zig-overlay";
     zig.inputs.nixpkgs.follows = "nixpkgs";
+    ghostty.url = "github:ghostty-org/ghostty";
+    ghostty.inputs.nixpkgs.follows = "nixpkgs";
     apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     apple-silicon.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-vtune.url = "github:xzfc/nixpkgs/4a32ac7311f23d4a17f6f294d19e1df5afc4f90d";
@@ -24,6 +26,7 @@
       plasma-manager,
       sops-nix,
       zig,
+      ghostty,
       apple-silicon,
       nixpkgs-vtune,
       ...
@@ -71,6 +74,7 @@
             sops-nix.nixosModules.sops
             {
               nixpkgs.overlays = [
+                ghostty.overlays.default
                 zig.overlays.default
                 (final: prev:
                   if prev.stdenv.hostPlatform.system == "x86_64-linux" then

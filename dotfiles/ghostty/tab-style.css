@@ -21,6 +21,7 @@ tabbar tabbox tab {
   margin: 4px 0;
   padding: 0;
   color: #9ca3af;
+  border-radius: 0;
 }
 
 tabbar tabbox tab:selected {
