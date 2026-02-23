@@ -54,6 +54,7 @@
     caligula
     bc
     bind
+    bat
 
     (python312.withPackages (
       ps: with ps; [

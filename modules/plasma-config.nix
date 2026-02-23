@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   programs.plasma = {
@@ -43,5 +38,8 @@
     };
     # TODO: Media playback shortcuts, disable mouse acceleration
     # power management
+    shortcuts = {
+      "com.mitchellh.ghostty.desktop"."_launch" = "Ctrl+Alt+T";
+    };
   };
 }

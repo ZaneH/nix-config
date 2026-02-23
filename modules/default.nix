@@ -3,7 +3,6 @@
   linux = ./linux.nix;
   desktop = ./desktop.nix;
   kde = ./kde.nix;
-  plasmaConfig = ./plasma-config.nix;
   globalHome = ./home.nix;
   networkDrives = ./network-drives.nix;
   virtualisation = ./virtualisation.nix;
@@ -28,4 +27,5 @@
   tailscale = ./tailscale.nix;
   openVpn = ./openvpn.nix;
   flatpak = ./flatpak.nix;
+  ghostty = ./ghostty.nix;
 }

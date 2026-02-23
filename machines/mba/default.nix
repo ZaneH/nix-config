@@ -26,7 +26,6 @@
 
   home-manager.sharedModules = [
     plasma-manager.homeModules.plasma-manager
-    modules.plasmaConfig
   ];
 
   boot.loader.systemd-boot.enable = true;

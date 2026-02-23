@@ -55,6 +55,7 @@ in
         ../modules/social.nix
         ../modules/libre-office.nix
         ../services/wayscriber.nix
+        ../modules/ghostty.nix
       ];
       # 3) Inject your per-user package list here
       home.packages = userPackages;
