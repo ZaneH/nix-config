@@ -15,6 +15,10 @@
       scrollback-limit = 10000000;
       gtk-custom-css = "${config.home.homeDirectory}/.config/ghostty/tab-style.css";
       scrollbar = "system";
+      keybind = [
+        "ctrl+alt+h=goto_split:left"
+        "ctrl+alt+l=goto_split:right"
+      ];
     };
   };
 }
