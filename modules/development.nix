@@ -44,6 +44,7 @@
     gdb
     cmake
     gnumake
+    just
     gcc
     cmake-language-server
     clang-tools
