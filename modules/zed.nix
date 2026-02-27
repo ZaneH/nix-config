@@ -41,9 +41,11 @@
           "space t" = "terminal_panel::ToggleFocus";
           "space g g" = "git_panel::ToggleFocus";
           "space /" = "pane::DeploySearch";
+          "space p g" = "pane::DeploySearch";
           "space f s" = "workspace::Save";
-          "space h" = "editor::ToggleInlayHints";
-          "ctrl-a" = "editor::ToggleCodeActions";
+          "space b" = "workspace::ToggleLeftDock";
+          "space c h" = "editor::ToggleInlayHints";
+          "space c a" = "editor::ToggleCodeActions";
           "] f" = "vim::NextMethodStart";
           "[ f" = "vim::PreviousMethodStart";
         };
