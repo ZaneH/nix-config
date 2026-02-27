@@ -9,6 +9,7 @@
     ./go.nix
     ./emacs.nix
     ./nvim.nix
+    ./zed.nix
     # ./zig.nix
   ];
 
