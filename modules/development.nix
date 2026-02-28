@@ -10,6 +10,7 @@
     ./emacs.nix
     ./nvim.nix
     ./zed.nix
+    ./cpp.nix
     # ./zig.nix
   ];
 
@@ -37,24 +38,17 @@
     docker
     hugo
     claude-code
-    claude-monitor
     imagemagick
     basedpyright
     dbeaver-bin
     parquet-tools
-    gdb
-    cmake
     gnumake
     just
-    gcc
     cmake-language-server
-    clang-tools
-    ccls
-    ninja
+    yaml-language-server
     vscode-extensions.vadimcn.vscode-lldb
     vscode-extensions.ms-vscode.cpptools
     vscode-langservers-extracted
-    yaml-language-server
     nixd
     nixfmt
     cutter
