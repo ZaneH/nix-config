@@ -6,8 +6,8 @@ Configured for GPU Passthrough with an NVIDIA card. Read more about the KVM conf
 
 ### Machines
 
-- [./machines/nixos/README.org](nixos) - Desktop
-- [./machines/mba/README.org](mba) - MacBook Air
+- [nixos](./machines/nixos) - Desktop
+- [mba](./machines/mba) - MacBook Air
 
 ### npm
 

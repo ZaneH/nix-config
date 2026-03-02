@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    wl-clipboard
+    grim
+    slurp
+  ];
   systemd.user.services.wayscriber = {
     Unit = {
       Description = "Wayscriber Daemon";
