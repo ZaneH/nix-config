@@ -39,6 +39,7 @@ in
   };
 
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
   users.users.${username}.shell = pkgs.zsh;
 
   # 2) Wire up Home-Manager
