@@ -88,4 +88,5 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   networking.enableIPv6 = false;
+  networking.nameservers = [ "10.0.0.55" ];
 }
