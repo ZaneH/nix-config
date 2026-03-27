@@ -10,6 +10,7 @@ in
       krita
       inkscape
       darktable
+      weylus
     ]
     ++ lib.optionals isX86Linux [
       davinci-resolve-studio
