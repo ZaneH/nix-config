@@ -9,6 +9,9 @@
   ####################   Core services   ####################
   networking.networkmanager.enable = true;
 
+  # TODO: Remove when Python Sphinx issue is resolved
+  documentation.doc.enable = false;
+
   services.printing.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -32,7 +35,7 @@
     xclip
     pavucontrol
     fd
-    neofetch
+    fastfetch
     htop
     btop
     ncdu
