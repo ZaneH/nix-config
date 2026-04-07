@@ -52,6 +52,7 @@
     nixd
     nixfmt
     cutter
+    opencode
   ];
 
   programs.git = {
