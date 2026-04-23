@@ -53,7 +53,7 @@
     nixfmt
     cutter
     opencode
-    wireshark-qt
+    wireshark
   ];
 
   programs.git = {
