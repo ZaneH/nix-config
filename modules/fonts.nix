@@ -2,9 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    wayscriber
-    # chatterino7
-    weylus
-    scrcpy
+    nerd-fonts.blex-mono
+    nerd-fonts.jetbrains-mono
   ];
 }

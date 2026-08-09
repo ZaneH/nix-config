@@ -16,6 +16,7 @@
     modules.sops
     modules.networkDrives
     modules.printers
+    modules.tailscale
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
@@ -30,6 +31,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
   hardware.asahi.peripheralFirmwareDirectory = /etc/nixos/firmware;
+  hardware.asahi.enable = true;
 
   networking.networkmanager.wifi.backend = "iwd";
   networking.wireless.iwd = {

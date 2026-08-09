@@ -11,6 +11,7 @@
     ./nvim.nix
     ./zed.nix
     ./cpp.nix
+    ./fonts.nix
     # ./zig.nix
   ];
 
@@ -30,14 +31,13 @@
     act
     httpie
     libtool
-    nerd-fonts.jetbrains-mono
     gnupg
     lazygit
     jujutsu
     nodejs_22
     docker
     hugo
-    claude-code
+    # claude-code
     imagemagick
     basedpyright
     dbeaver-bin
@@ -52,7 +52,7 @@
     nixd
     nixfmt
     cutter
-    opencode
+    # opencode
     wireshark
   ];
 

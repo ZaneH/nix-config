@@ -9,7 +9,7 @@
     settings = {
       theme = "Gruvbox Dark";
       font-size = 10;
-      font-family = "Hack";
+      font-family = "IBM Blex Mono";
       gtk-wide-tabs = false;
       bell-features = "system";
       scrollback-limit = 10000000;
