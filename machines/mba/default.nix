@@ -17,6 +17,7 @@
     modules.networkDrives
     modules.printers
     modules.tailscale
+    modules.math
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
