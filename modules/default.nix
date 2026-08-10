@@ -28,5 +28,6 @@
   openVpn = ./openvpn.nix;
   flatpak = ./flatpak.nix;
   ghostty = ./ghostty.nix;
+  fonts = ./fonts.nix;
   math = ./math.nix;
 }

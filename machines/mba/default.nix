@@ -13,6 +13,7 @@
     modules.universal
     modules.linux
     modules.desktop
+    modules.fonts
     modules.sops
     modules.networkDrives
     modules.printers

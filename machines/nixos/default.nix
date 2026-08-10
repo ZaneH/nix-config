@@ -11,6 +11,7 @@
     modules.universal
     modules.linux
     modules.desktop
+    modules.fonts
     modules.nvidiaPassthrough
     modules.virtualisation
     modules.networkDrives

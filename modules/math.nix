@@ -1,9 +1,8 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     julia
     octave
-    matlab-language-server
   ];
 }

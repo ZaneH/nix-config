@@ -11,7 +11,6 @@
     ./nvim.nix
     ./zed.nix
     ./cpp.nix
-    ./fonts.nix
     # ./zig.nix
   ];
 
