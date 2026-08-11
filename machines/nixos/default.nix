@@ -56,8 +56,8 @@
     enable32Bit = true;
   };
 
-  programs.amdProfiling.enable = true;
-  programs.amdProfiling.enableUprof = true;
+  #programs.amdProfiling.enable = true;
+  #programs.amdProfiling.enableUprof = true;
 
   system.stateVersion = "25.05";
 }

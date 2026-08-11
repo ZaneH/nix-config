@@ -10,6 +10,7 @@ in
       krita
       inkscape
       darktable
+      anki
     ]
     ++ lib.optionals isX86Linux [
       davinci-resolve-studio
