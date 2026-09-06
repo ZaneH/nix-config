@@ -24,6 +24,7 @@
     modules.printers
     modules.openVpn
     modules.amdProfiling
+    modules.calibreWeb
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix

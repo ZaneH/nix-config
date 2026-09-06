@@ -61,6 +61,7 @@
     lfs.enable = true;
     ignores = [
       ".envrc"
+      "**/.claude/settings.local.json"
     ];
   };
 

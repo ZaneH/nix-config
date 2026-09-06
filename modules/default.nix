@@ -30,4 +30,5 @@
   ghostty = ./ghostty.nix;
   fonts = ./fonts.nix;
   math = ./math.nix;
+  calibreWeb = ./calibre-web.nix;
 }

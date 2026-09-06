@@ -38,6 +38,15 @@
         builtins.attrNames (builtins.readDir ./machines)
       );
 
+      hostMetadata = {
+        nixos = {
+          username = "me";
+        };
+        mba = {
+          username = "me";
+        };
+      };
+
       hostArchitectures = {
         nixos = "x86_64-linux";
         mba = "aarch64-linux";
@@ -76,7 +85,8 @@
               nixpkgs.overlays = [
                 ghostty.overlays.default
                 zig.overlays.default
-                (final: prev:
+                (
+                  final: prev:
                   if prev.stdenv.hostPlatform.system == "x86_64-linux" then
                     {
                       intel-oneapi-vtune = vtunePkgs.intel-oneapi-vtune;
@@ -93,6 +103,7 @@
           ];
           specialArgs = mkSpecialArgs // {
             inherit host;
+            username = (hostMetadata.${host} or { }).username or "me";
           };
         }
       );
