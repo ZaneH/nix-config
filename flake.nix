@@ -16,6 +16,7 @@
     apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     apple-silicon.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-vtune.url = "github:xzfc/nixpkgs/4a32ac7311f23d4a17f6f294d19e1df5afc4f90d";
+    omp.url = "github:can1357/oh-my-pi/v18.2.6";
   };
 
   outputs =
@@ -29,6 +30,7 @@
       ghostty,
       apple-silicon,
       nixpkgs-vtune,
+      omp,
       ...
     }:
 
@@ -53,7 +55,7 @@
       };
 
       modules = import ./modules;
-      mkSpecialArgs = { inherit modules home-manager plasma-manager; };
+      mkSpecialArgs = { inherit modules home-manager plasma-manager omp; };
       vtunePkgs = import nixpkgs-vtune {
         system = "x86_64-linux";
         config.allowUnfree = true;

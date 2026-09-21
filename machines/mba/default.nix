@@ -5,6 +5,7 @@
   host,
   home-manager,
   plasma-manager,
+  omp,
   ...
 }:
 
@@ -28,6 +29,8 @@
 
   home-manager.sharedModules = [
     plasma-manager.homeModules.plasma-manager
+    omp.homeManagerModules.default
+    modules.aiTools
   ];
 
   boot.loader.systemd-boot.enable = true;

@@ -25,6 +25,7 @@
   printers = ./printers.nix;
   ollama = ./ollama.nix;
   tailscale = ./tailscale.nix;
+  aiTools = ./ai-tools.nix;
   openVpn = ./openvpn.nix;
   flatpak = ./flatpak.nix;
   ghostty = ./ghostty.nix;

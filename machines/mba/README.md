@@ -1,0 +1,7 @@
+# M1 MacBook Air
+
+This configuration is similar to my desktop. Still KDE. The configuration expects a folder at `/etc/nixos/firmware`.
+
+The SOPS key goes in `/var/lib/sops-nix/keys.txt`.
+
+```sh sudo nixos-rebuild switch --flake .#mba --impure ```
