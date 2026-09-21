@@ -8,6 +8,7 @@ in
     with pkgs;
     [
       element-desktop
+      telegram-desktop
     ]
     ++ lib.optionals isX86Linux [
       slack

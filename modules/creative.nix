@@ -11,6 +11,7 @@ in
       inkscape
       darktable
       anki
+      blender
     ]
     ++ lib.optionals isX86Linux [
       davinci-resolve-studio

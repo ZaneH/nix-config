@@ -36,7 +36,6 @@
     nodejs_22
     docker
     hugo
-    # claude-code
     imagemagick
     basedpyright
     dbeaver-bin
@@ -51,7 +50,6 @@
     nixd
     nixfmt
     cutter
-    # opencode
     wireshark
   ];
 

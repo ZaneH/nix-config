@@ -17,12 +17,10 @@ let
     [
       moonlight-qt
       geekbench_5
-      blender
       ticker
-      telegram-desktop
       transmission_4-qt
-      brave
       affine
+      brave
     ]
     ++ lib.optionals isX86Linux [
       google-chrome
