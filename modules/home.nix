@@ -55,6 +55,9 @@
           "git"
           "gpg-agent"
           "jj"
+          "alias-finder" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/alias-finder
+          "git-prompt"
+          "cp" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cp
         ];
       };
       initContent = builtins.readFile ../dotfiles/zshrc;
