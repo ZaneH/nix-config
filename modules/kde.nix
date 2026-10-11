@@ -7,7 +7,7 @@
 let
   isX86Linux = pkgs.stdenv.hostPlatform.system == "x86_64-linux";
 in
-lib.mkIf pkgs.stdenv.isLinux {
+lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
   # 1) Enable SDDM & Plasma (only on Linux)
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
@@ -24,5 +24,6 @@ lib.mkIf pkgs.stdenv.isLinux {
     with pkgs.kdePackages;
     lib.optionals isX86Linux [
       kcalc
+      colord-kde
     ];
 }

@@ -10,6 +10,7 @@
   imports = [
     modules.universal
     modules.linux
+    modules.appimage
     modules.desktop
     modules.fonts
     modules.nvidiaPassthrough
@@ -25,6 +26,7 @@
     modules.openVpn
     modules.amdProfiling
     modules.calibreWeb
+    modules.colorProfiles
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
