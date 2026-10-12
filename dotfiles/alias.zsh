@@ -17,13 +17,13 @@ alias k="clear"
 alias sz="source ~/.zshrc"
 alias v="$EDITOR ."
 alias n="$EDITOR ."
+alias e='emacsclient -c -a ""'
 
 # Utilities
 alias pbcopy="xclip -selection clipboard"
 alias yt3="yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 0 --downloader aria2c --downloader-args '-c -j 3 -x 3 -s 3 -k 1M'"
 # Embed Artwork + Metadata
 alias yt3e="yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata --downloader aria2c --downloader-args '-c -j 3 -x 3 -s 3 -k 1M'"
-alias e='emacsclient -c -a ""'
 
 # Fetch gitignore
 dl-gitignore() {
@@ -45,3 +45,6 @@ dl-license() {
   local name="${1:l}"
   curl -fsSL "https://raw.githubusercontent.com/licenses/license-templates/master/templates/${name}.txt"
 }
+
+# Pi wrapper
+alias pi="LD_LIBRARY_PATH=$PI_LIBS pi"
