@@ -38,6 +38,7 @@
   # Add plasma-manager to home-manager sharedModules for this machine
   home-manager.sharedModules = [
     plasma-manager.homeModules.plasma-manager
+    modules.aiTools
   ];
 
   time.timeZone = "America/New_York";
