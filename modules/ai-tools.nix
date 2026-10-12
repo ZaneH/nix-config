@@ -7,6 +7,7 @@
     claude-code
     opencode
     pi
+    herdr
   ];
 
   # programs.omp = {

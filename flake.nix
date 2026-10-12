@@ -18,6 +18,7 @@
     nixpkgs-vtune.url = "github:xzfc/nixpkgs/4a32ac7311f23d4a17f6f294d19e1df5afc4f90d";
     omp.url = "github:can1357/oh-my-pi/v18.2.6";
     pi.url = "github:earendil-works/pi/stable";
+    herdr.url = "github:herdrdev/herdr";
   };
 
   outputs =
@@ -33,6 +34,7 @@
       nixpkgs-vtune,
       omp,
       pi,
+      herdr,
       ...
     }:
 
@@ -97,6 +99,7 @@
                 ghostty.overlays.default
                 zig.overlays.default
                 pi.overlays.default
+                herdr.overlays.default
                 (
                   final: prev:
                   if prev.stdenv.hostPlatform.system == "x86_64-linux" then
