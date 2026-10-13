@@ -15,7 +15,6 @@ let
   userPackages =
     with pkgs;
     [
-      moonlight-qt
       geekbench_5
       ticker
       transmission_4-qt

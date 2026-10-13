@@ -18,5 +18,6 @@
   environment.systemPackages = with pkgs; [
     protonup-ng
     r2modman
+    moonlight-qt
   ];
 }
