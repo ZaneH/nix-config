@@ -23,7 +23,6 @@ lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
   environment.systemPackages =
     with pkgs.kdePackages;
     lib.optionals isX86Linux [
-      kcalc
       colord-kde
     ];
 }

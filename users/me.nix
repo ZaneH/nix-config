@@ -21,6 +21,7 @@ let
       transmission_4-qt
       affine
       brave
+      qalculate-gtk
     ]
     ++ lib.optionals isX86Linux [
       google-chrome
