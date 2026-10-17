@@ -54,6 +54,7 @@ in
         ../modules/social.nix
         ../modules/libre-office.nix
         ../services/wayscriber.nix
+        ../services/jellyfin-rpc.nix
         ../modules/ghostty.nix
       ];
       # 3) Inject your per-user package list here
