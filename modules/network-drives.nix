@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 
@@ -20,6 +18,30 @@
     # $ chown $USER:users /root/.smbcredentials
     fileSystems."/mnt/storage" = {
       device = "//10.0.0.76/storage";
+      fsType = "cifs";
+      options = [
+        "credentials=/root/.smbcredentials"
+        "uid=1000"
+        "gid=100"
+        "x-systemd.automount"
+        "nofail"
+        "x-systemd.idle-timeout=300"
+      ];
+    };
+    fileSystems."/mnt/jellyfin" = {
+      device = "//10.0.0.76/jellyfin";
+      fsType = "cifs";
+      options = [
+        "credentials=/root/.smbcredentials"
+        "uid=1000"
+        "gid=100"
+        "x-systemd.automount"
+        "nofail"
+        "x-systemd.idle-timeout=300"
+      ];
+    };
+    fileSystems."/mnt/nextcloud" = {
+      device = "//10.0.0.76/nextcloud";
       fsType = "cifs";
       options = [
         "credentials=/root/.smbcredentials"
