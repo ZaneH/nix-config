@@ -16,9 +16,12 @@
     apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     apple-silicon.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-vtune.url = "github:xzfc/nixpkgs/4a32ac7311f23d4a17f6f294d19e1df5afc4f90d";
+    # <ai_tools>
     omp.url = "github:can1357/oh-my-pi/v18.2.6";
     pi.url = "github:earendil-works/pi/stable";
     herdr.url = "github:herdrdev/herdr";
+    collie.url = "github:AltanS/collie";
+    # </ai_tools>
   };
 
   outputs =
@@ -35,6 +38,7 @@
       omp,
       pi,
       herdr,
+      collie,
       ...
     }:
 
@@ -100,6 +104,9 @@
                 zig.overlays.default
                 pi.overlays.default
                 herdr.overlays.default
+                (final: prev: {
+                  collie = collie.packages.${prev.stdenv.hostPlatform.system}.collie;
+                })
                 (
                   final: prev:
                   if prev.stdenv.hostPlatform.system == "x86_64-linux" then

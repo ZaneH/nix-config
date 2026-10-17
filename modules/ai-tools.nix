@@ -9,6 +9,8 @@
     opencode
     pi
     herdr
+    collie
+    poppler-utils # for pdftotext
   ];
 
   home.sessionVariables = {

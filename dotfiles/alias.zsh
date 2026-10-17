@@ -17,7 +17,8 @@ alias k="clear"
 alias sz="source ~/.zshrc"
 alias v="$EDITOR ."
 alias n="$EDITOR ."
-alias e='emacsclient -c -a ""'
+alias e="emacsclient -c -a """
+alias cp="cpv"
 
 # Utilities
 alias pbcopy="xclip -selection clipboard"
