@@ -49,3 +49,9 @@ dl-license() {
 
 # Pi wrapper
 alias pi="LD_LIBRARY_PATH=$PI_LIBS pi"
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/alias-finder
+zstyle ':omz:plugins:alias-finder' autoload yes
+zstyle ':omz:plugins:alias-finder' longer yes
+zstyle ':omz:plugins:alias-finder' exact yes
+zstyle ':omz:plugins:alias-finder' cheaper yes
