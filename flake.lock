@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1793097463,
-        "narHash": "sha256-J++WrvNRAuSaayrb9e4p3JFIC2emEntF8GaVaF8ZEq8=",
+        "lastModified": 1793289186,
+        "narHash": "sha256-Wk5ueVvNNbNPgTK9oIejquJtD5gTl7pjU/zdDNq16pE=",
         "owner": "AltanS",
         "repo": "collie",
-        "rev": "37351ff1e07b851ab06dfb52c99d0f028742c067",
+        "rev": "8ca38b5c05983ebcfe8c55a7296b203136b12b2f",
         "type": "github"
       },
       "original": {
@@ -209,11 +209,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1793052051,
-        "narHash": "sha256-i8SGIqqebpHXG9oz7YknMZye48B/7UaXJZhHEZcmAT0=",
+        "lastModified": 1793278609,
+        "narHash": "sha256-0B58jR/v1vxbK7cwoq++SnOCsED0sHDkgqVMvsrjezE=",
         "owner": "herdrdev",
         "repo": "herdr",
-        "rev": "2713feb56e9c9db33992db0a262c68f7426d46dd",
+        "rev": "ee5bfb5041bb3e4a49d591c72308aae3c81ecdde",
         "type": "github"
       },
       "original": {
