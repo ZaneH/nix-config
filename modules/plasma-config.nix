@@ -6,6 +6,29 @@
     workspace = {
       colorScheme = "BreezeDark";
     };
+    window-rules = [
+      {
+        description = "Window settings for brave";
+        match = {
+          window-class = {
+            value = "brave";
+            type = "substring";
+            match-whole = false;
+          };
+          window-types = [ "normal" ];
+          title = {
+            value = "Picture in picture";
+            type = "exact";
+          };
+        };
+        apply = {
+          above = {
+            value = true;
+            apply = "initially";
+          };
+        };
+      }
+    ];
     spectacle = {
       shortcuts = {
         captureActiveWindow = "Ctrl+@";
