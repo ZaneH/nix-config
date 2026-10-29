@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1793289186,
-        "narHash": "sha256-Wk5ueVvNNbNPgTK9oIejquJtD5gTl7pjU/zdDNq16pE=",
+        "lastModified": 1793396083,
+        "narHash": "sha256-VhUsdIpJONQy7n3Pd5Qy58GyMrTzDgEg+QuzMFPwvOo=",
         "owner": "AltanS",
         "repo": "collie",
-        "rev": "8ca38b5c05983ebcfe8c55a7296b203136b12b2f",
+        "rev": "22b6c3ad79f4d0ba16fc2a5e34dc1f15f728310b",
         "type": "github"
       },
       "original": {
