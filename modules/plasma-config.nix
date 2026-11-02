@@ -241,6 +241,7 @@
       kiorc.Confirmations.ConfirmEmptyTrash = true;
       kiorc.Confirmations.ConfirmTrash = false;
       kiorc."Executable scripts".behaviourOnLaunch = "alwaysAsk";
+      klipperrc.Actions.EnableMagicMimeActions = false;
       klipperrc.General.IgnoreImages = false;
       klipperrc.General.MaxClipItems = 100;
       kscreenlockerrc.Daemon.Timeout = 30;
