@@ -42,7 +42,7 @@
               "applications:brave-browser.desktop"
               "applications:org.kde.dolphin.desktop"
               "applications:com.mitchellh.ghostty.desktop"
-              "applications:org.obs-studio.desktop"
+              "applications:com.obsproject.Studio.desktop"
               "applications:davinci-resolve-studio.desktop"
             ];
           }
