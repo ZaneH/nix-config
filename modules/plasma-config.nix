@@ -5,17 +5,44 @@
     enable = true;
     workspace = {
       colorScheme = "BreezeDark";
+      wallpaper = "/home/me/.local/share/wallpapers/Nothing1/contents/images/5521x2487.png";
     };
+    # Brave PiP above other windows
+    window-rules = [
+      {
+        description = "Window settings for brave";
+        match = {
+          window-class = {
+            value = "brave";
+            type = "substring";
+            match-whole = false;
+          };
+          window-types = [ "normal" ];
+          title = {
+            value = "Picture in picture";
+            type = "exact";
+          };
+        };
+        apply = {
+          above = {
+            value = true;
+            apply = "initially";
+          };
+        };
+      }
+    ];
     panels = [
       {
+        screen = "all";
         location = "bottom";
         widgets = [
-          "org.kde.plasma.kickoff"
+          { kickoff.icon = "kimtoy"; }
           {
             iconTasks.launchers = [
               "applications:brave-browser.desktop"
               "applications:org.kde.dolphin.desktop"
               "applications:com.mitchellh.ghostty.desktop"
+              "applications:org.obs-studio.desktop"
               "applications:davinci-resolve-studio.desktop"
             ];
           }
@@ -250,6 +277,8 @@
         "file:///home/me/.local/share/wallpapers/Nothing1/";
       kscreenlockerrc."Greeter/Wallpaper/org.kde.image/General".PreviewImage =
         "file:///home/me/.local/share/wallpapers/Nothing1/";
+      kscreenlockerrc."Greeter/Wallpaper/org.kde.image/General".SlidePaths =
+        "/home/me/.local/share/wallpapers/,/nix/store/nalqpvc3sn67b3xc6lsl2z1xygv9fn56-breeze-6.7.5/share/wallpapers/,/run/current-system/sw/share/wallpapers/";
       ksmserverrc.General.loginMode = "emptySession";
       ksplashrc.KSplash.Theme = "org.kde.breeze.desktop";
       ktrashrc."\\/home\\/me\\/.local\\/share\\/Trash".Days = 7;
@@ -279,17 +308,6 @@
       kwinrc."org.kde.kdecoration2".BorderSize = "None";
       kwinrc."org.kde.kdecoration2".BorderSizeAuto = false;
       kwinrc."org.kde.kdecoration2".ButtonsOnLeft = "M";
-      kwinrulesrc."1".Description = "Window settings for brave";
-      kwinrulesrc."1".above = true;
-      kwinrulesrc."1".aboverule = 3;
-      kwinrulesrc."1".title = "Picture in picture";
-      kwinrulesrc."1".titlematch = 1;
-      kwinrulesrc."1".types = 1;
-      kwinrulesrc."1".wmclass = "brave";
-      kwinrulesrc."1".wmclasscomplete = false;
-      kwinrulesrc."1".wmclassmatch = 2;
-      kwinrulesrc.General.count = 1;
-      kwinrulesrc.General.rules = 1;
       plasma-localerc.Formats.LANG = "en_US.UTF-8";
       plasmanotifyrc.Notifications.PopupTimeout = 3000;
       plasmanotifyrc.Notifications.ShowPopupTimeout = false;
