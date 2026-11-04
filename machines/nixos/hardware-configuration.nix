@@ -54,6 +54,9 @@
   ];
   # </gpu_passthrough>
 
+  # Build machine for MacBook Air
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
