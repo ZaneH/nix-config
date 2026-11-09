@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1793564171,
-        "narHash": "sha256-SKylHhknr18Tgi1RdUyUDha0nzzzfW+j6HzX91wYflc=",
+        "lastModified": 1793975264,
+        "narHash": "sha256-8ZG/8DhCMfniJUXg7riwDeipYDquKiUsB++htxzibHE=",
         "owner": "AltanS",
         "repo": "collie",
-        "rev": "610a3679e414b40c1a782a825bafc360a9643116",
+        "rev": "77666e4a56b6ca72b168f69984f990990ee3fe9b",
         "type": "github"
       },
       "original": {
@@ -222,6 +222,27 @@
         "type": "github"
       }
     },
+    "hex": {
+      "inputs": {
+        "home-manager": "home-manager_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794184684,
+        "narHash": "sha256-m26D8I1jga1cpZsGC8lTaHSDEBIDcvMLjsUbgPJquxw=",
+        "owner": "anomalyco",
+        "repo": "hex",
+        "rev": "5b347994336f7314d050e40ce2f8dd43d05708dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anomalyco",
+        "repo": "hex",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -244,6 +265,27 @@
       }
     },
     "home-manager_2": {
+      "inputs": {
+        "nixpkgs": [
+          "hex",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787797243,
+        "narHash": "sha256-8+Q7NOB7RPajRjA4pbCDLzqH+MTjnG9x6LUPLfL2joA=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "99c9ec63390f1d8c14d95d9e8b17cc29cfbd4e11",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_3": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -516,7 +558,8 @@
         "collie": "collie",
         "ghostty": "ghostty",
         "herdr": "herdr",
-        "home-manager": "home-manager_2",
+        "hex": "hex",
+        "home-manager": "home-manager_3",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-vtune": "nixpkgs-vtune",

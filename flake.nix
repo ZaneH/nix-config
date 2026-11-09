@@ -21,6 +21,8 @@
     pi.url = "github:earendil-works/pi/stable";
     herdr.url = "github:herdrdev/herdr";
     collie.url = "github:AltanS/collie";
+    hex.url = "github:anomalyco/hex";
+    hex.inputs.nixpkgs.follows = "nixpkgs";
     # </ai_tools>
   };
 
@@ -39,6 +41,7 @@
       pi,
       herdr,
       collie,
+      hex,
       ...
     }:
 
@@ -69,6 +72,7 @@
           home-manager
           plasma-manager
           omp
+          hex
           ;
       };
       vtunePkgs = import nixpkgs-vtune {

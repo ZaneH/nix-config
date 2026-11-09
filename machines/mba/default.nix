@@ -5,7 +5,7 @@
   host,
   home-manager,
   plasma-manager,
-  omp,
+  hex,
   ...
 }:
 
@@ -29,7 +29,8 @@
 
   home-manager.sharedModules = [
     plasma-manager.homeModules.plasma-manager
-    omp.homeManagerModules.default
+    hex.homeManagerModules.hex
+    ../../modules/hex.nix
     modules.aiTools
   ];
 

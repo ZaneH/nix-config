@@ -3,6 +3,8 @@
   host,
   home-manager,
   plasma-manager,
+  hex,
+  username,
   ...
 }:
 
@@ -30,7 +32,7 @@
     home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../users/me.nix
-    /home/me/.config/nix/private.nix
+    /home/${username}/.config/nix/private.nix
   ];
 
   networking.hostName = host;
@@ -39,6 +41,8 @@
   home-manager.sharedModules = [
     plasma-manager.homeModules.plasma-manager
     modules.aiTools
+    hex.homeManagerModules.hex
+    ../../modules/hex.nix
   ];
 
   time.timeZone = "America/New_York";

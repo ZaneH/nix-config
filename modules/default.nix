@@ -34,4 +34,5 @@
   calibreWeb = ./calibre-web.nix;
   appimage = ./appimage.nix;
   colorProfiles = ./color-profiles.nix;
+  hex = ./hex.nix;
 }
