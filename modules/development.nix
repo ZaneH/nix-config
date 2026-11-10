@@ -51,6 +51,7 @@
     nixfmt
     cutter
     wireshark
+    gh
   ];
 
   programs.git = {
