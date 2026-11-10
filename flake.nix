@@ -17,7 +17,6 @@
     apple-silicon.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-vtune.url = "github:xzfc/nixpkgs/4a32ac7311f23d4a17f6f294d19e1df5afc4f90d";
     # <ai_tools>
-    omp.url = "github:can1357/oh-my-pi/v18.2.6";
     pi.url = "github:earendil-works/pi/stable";
     herdr.url = "github:herdrdev/herdr";
     collie.url = "github:AltanS/collie";
@@ -37,7 +36,6 @@
       ghostty,
       apple-silicon,
       nixpkgs-vtune,
-      omp,
       pi,
       herdr,
       collie,
@@ -71,7 +69,6 @@
           modules
           home-manager
           plasma-manager
-          omp
           hex
           ;
       };

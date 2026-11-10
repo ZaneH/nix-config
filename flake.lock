@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1793975264,
-        "narHash": "sha256-8ZG/8DhCMfniJUXg7riwDeipYDquKiUsB++htxzibHE=",
+        "lastModified": 1794340903,
+        "narHash": "sha256-1EKM1KtBuSiUtzdzTqcQMEIa8YVoxqX1Mxk/jdY2CJY=",
         "owner": "AltanS",
         "repo": "collie",
-        "rev": "77666e4a56b6ca72b168f69984f990990ee3fe9b",
+        "rev": "58b42255f9985d3b9f78b2763015deea9ecdc256",
         "type": "github"
       },
       "original": {
@@ -515,11 +515,11 @@
         "nixpkgs-darwin-x64": "nixpkgs-darwin-x64_2"
       },
       "locked": {
-        "lastModified": 1792621753,
-        "narHash": "sha256-N9NOpiiZTbOMDMV+CxvJAgtLjJJ1/8NJBGS0cFHkhsc=",
+        "lastModified": 1794312108,
+        "narHash": "sha256-0dKtABQqfvCLF0WOydu5rpycMqC+N8Pc9Ex4BWKElyw=",
         "owner": "earendil-works",
         "repo": "pi",
-        "rev": "4a080252f06caf63a525d7873c5d94d3c23887e0",
+        "rev": "b4afdddf44e059c67ccf5097e5317d913521b470",
         "type": "github"
       },
       "original": {
