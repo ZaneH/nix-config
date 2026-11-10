@@ -34,6 +34,9 @@ in
     extraGroups = [ "wheel" ];
     uid = 1000;
     initialHashedPassword = "$y$j9T$HY94rD7gaT78XgT3mZVlW/$C6rSif/qBW5A.l/UFTrnv009o5U0z5dvK8oDYRSSKH4"; # "password"
+    openssh.authorizedKeys.keyFiles = [
+      config.sops.secrets.id_rsa_personal_pub.path
+    ];
   };
 
   programs.zsh.enable = true;

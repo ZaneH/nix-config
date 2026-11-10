@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  username,
   ...
 }:
 
@@ -20,48 +21,48 @@
       # SSH keys
       "id_rsa_personal" = {
         sopsFile = ./../secrets/ssh.yaml;
-        # TODO: Make the uid and path not hard-coded
+        # TODO: Make the uid not hard-coded
         uid = 1000;
-        path = "/home/me/.ssh/id_rsa_personal";
+        path = "/home/${username}/.ssh/id_rsa_personal";
         mode = "0600";
       };
       "id_rsa_personal_pub" = {
         sopsFile = ./../secrets/ssh.yaml;
         uid = 1000;
-        path = "/home/me/.ssh/id_rsa_personal.pub";
+        path = "/home/${username}/.ssh/id_rsa_personal.pub";
         mode = "0600";
       };
       "id_rsa_work" = {
         sopsFile = ./../secrets/ssh.yaml;
-        # TODO: Make the uid and path not hard-coded
+        # TODO: Make the uid not hard-coded
         uid = 1000;
-        path = "/home/me/.ssh/id_rsa_work";
+        path = "/home/${username}/.ssh/id_rsa_work";
         mode = "0600";
       };
       "id_rsa_work_pub" = {
         sopsFile = ./../secrets/ssh.yaml;
         uid = 1000;
-        path = "/home/me/.ssh/id_rsa_work.pub";
+        path = "/home/${username}/.ssh/id_rsa_work.pub";
         mode = "0600";
       };
       # SSH configuration
       "config" = {
         sopsFile = ./../secrets/ssh.yaml;
         uid = 1000;
-        path = "/home/me/.ssh/config";
+        path = "/home/${username}/.ssh/config";
         mode = "0644";
       };
       # Git configuration
       "gitconfig" = {
         sopsFile = ./../secrets/git.yaml;
         uid = 1000;
-        path = "/home/me/.gitconfig";
+        path = "/home/${username}/.gitconfig";
         mode = "0644";
       };
       "gitconfig_work" = {
         sopsFile = ./../secrets/git.yaml;
         uid = 1000;
-        path = "/home/me/.gitconfig-work";
+        path = "/home/${username}/.gitconfig-work";
         mode = "0644";
       };
     };

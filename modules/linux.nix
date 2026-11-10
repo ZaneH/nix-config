@@ -16,7 +16,20 @@
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+    };
+  };
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ ];
+    trustedInterfaces = [ "tailscale0" ];
+  };
 
   services.pipewire = {
     enable = true;
