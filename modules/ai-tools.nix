@@ -11,6 +11,6 @@
     herdr
     collie
     poppler-utils # for pdftotext
-    linear
+    # linear
   ];
 }
